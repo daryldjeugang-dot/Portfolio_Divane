@@ -55,6 +55,13 @@ export default function Navbar() {
         <button className="nav-logo" onClick={() => scrollTo('home')}>
           &lt;<span>daryl</span>/&gt;
         </button>
+        <ul className={`nav-links ${open ? 'active' : ''}`}>
+          {links.map(l => (
+            <li key={l.id}>
+              <a href={`#${l.id}`} className={active === l.id ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
+            </li>
+          ))}
+        </ul>
         <div className="nav-actions">
           <button className="lang-toggle-btn" onClick={toggleLang} aria-label="Toggle language">
             {lang === 'fr' ? 'EN' : 'FR'}
@@ -66,13 +73,6 @@ export default function Navbar() {
             <i className={`fas fa-${open ? 'times' : 'bars'}`} />
           </button>
         </div>
-        <ul className={`nav-links ${open ? 'active' : ''}`}>
-          {links.map(l => (
-            <li key={l.id}>
-              <a href={`#${l.id}`} className={active === l.id ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
-            </li>
-          ))}
-        </ul>
       </div>
     </nav>
   )

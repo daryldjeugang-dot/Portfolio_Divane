@@ -11,8 +11,13 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert(t('contact.alert'))
-    e.target.reset()
+    const fd = new FormData(e.target)
+    const name = fd.get('name')
+    const email = fd.get('email')
+    const subject = fd.get('subject')
+    const message = fd.get('message')
+    const body = `Nom: ${name}\nEmail: ${email}\n\n${message}`
+    window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   return (
@@ -55,6 +60,18 @@ export default function Contact() {
             </div>
 
             <div className="contact-item">
+              <i className="fab fa-whatsapp" style={{ color: '#25D366' }} />
+              <div>
+                <div className="lbl">{fields.whatsapp}</div>
+                <div className="val">
+                  <a href={`https://wa.me/${personalInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                    +237 680 29 28 80
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="contact-item">
               <i className="fab fa-github" />
               <div>
                 <div className="lbl">{fields.github}</div>
@@ -72,19 +89,19 @@ export default function Contact() {
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">{form.name}</label>
-                <input type="text" id="name" placeholder={form.namePlaceholder} required />
+                <input type="text" id="name" name="name" placeholder={form.namePlaceholder} required />
               </div>
               <div className="form-group">
                 <label htmlFor="email">{form.email}</label>
-                <input type="email" id="email" placeholder={form.emailPlaceholder} required />
+                <input type="email" id="email" name="email" placeholder={form.emailPlaceholder} required />
               </div>
               <div className="form-group">
                 <label htmlFor="subject">{form.subject}</label>
-                <input type="text" id="subject" placeholder={form.subjectPlaceholder} />
+                <input type="text" id="subject" name="subject" placeholder={form.subjectPlaceholder} />
               </div>
               <div className="form-group">
                 <label htmlFor="message">{form.message}</label>
-                <textarea id="message" placeholder={form.messagePlaceholder} required />
+                <textarea id="message" name="message" placeholder={form.messagePlaceholder} required />
               </div>
               <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                 <i className="fas fa-paper-plane" /> {form.submit}

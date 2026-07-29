@@ -24,7 +24,7 @@
     "subheading": "Étudiant en Qualité, Sécurité Internet & Réseau",
     "accent": "Qualité, Sécurité Internet & Réseau",
     "text": [
-      "Je suis étudiant en Licence Technologique à l'IUT de Bandjoun, passionné par la cybersécurité, les réseaux et l'administration des systèmes. Je développe mes compétences à travers des projets pratiques et des environnements de laboratoire.",
+      "Passionné par la cybersécurité, les réseaux et l'administration des systèmes, je développe mes compétences à travers des projets pratiques et des environnements de laboratoire.",
       "Mon parcours m'a permis d'acquérir une base solide en réseaux, systèmes Linux/Windows, sécurité informatique et développement. Je m'intéresse particulièrement à la sécurisation des infrastructures, à l'analyse réseau, à l'administration système et à l'automatisation.",
       "Mon objectif est de continuer à progresser dans le domaine de la cybersécurité et de participer à des projets renforçant la sécurité et la fiabilité des systèmes d'information."
     ],
@@ -209,7 +209,8 @@
       "email": "Email",
       "phone": "Téléphone",
       "location": "Localisation",
-      "github": "GitHub"
+      "github": "GitHub",
+      "whatsapp": "WhatsApp"
     },
     "form": {
       "heading": "Envoyez-moi un message",

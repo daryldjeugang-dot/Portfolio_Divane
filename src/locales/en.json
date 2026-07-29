@@ -24,7 +24,7 @@
     "subheading": "Student in Quality, Internet Security & Network",
     "accent": "Quality, Internet Security & Network",
     "text": [
-      "I am a student in the Technological Bachelor's program at IUT de Bandjoun, passionate about cybersecurity, networks, and systems administration. I develop my skills through practical projects and laboratory environments.",
+      "Passionate about cybersecurity, networks, and systems administration, I develop my skills through practical projects and laboratory environments.",
       "My journey has allowed me to build a solid foundation in networks, Linux/Windows systems, IT security, and development. I am particularly interested in infrastructure security, network analysis, system administration, and automation.",
       "My goal is to continue growing in the field of cybersecurity and to participate in projects that strengthen the security and reliability of information systems."
     ],
@@ -209,7 +209,8 @@
       "email": "Email",
       "phone": "Phone",
       "location": "Location",
-      "github": "GitHub"
+      "github": "GitHub",
+      "whatsapp": "WhatsApp"
     },
     "form": {
       "heading": "Send me a message",
