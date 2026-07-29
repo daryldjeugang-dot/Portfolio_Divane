@@ -1,20 +1,22 @@
 import { useInView } from '../hooks/useInView'
-import { skillCategories } from '../data/content'
+import { useTranslation } from '../context/LanguageContext'
 import './Skills.css'
 
 export default function Skills() {
   const [ref, visible] = useInView()
+  const { t } = useTranslation()
+  const categories = t('skills.categories', { returnObjects: true })
 
   return (
     <section id="skills" style={{ background: 'var(--bg-secondary)' }}>
       <div className="container">
         <div className={`section-header ${visible ? 'visible' : ''}`} ref={ref}>
-          <div className="label">Compétences</div>
-          <h2>Mes domaines d'expertise</h2>
-          <p>Cybersécurité, Réseaux, Systèmes, Développement &amp; Données</p>
+          <div className="label">{t('skills.label')}</div>
+          <h2>{t('skills.heading')}</h2>
+          <p>{t('skills.subtitle')}</p>
         </div>
         <div className="skills-categories">
-          {skillCategories.map((cat, i) => (
+          {categories.map((cat, i) => (
             <SkillCategory key={i} cat={cat} />
           ))}
         </div>

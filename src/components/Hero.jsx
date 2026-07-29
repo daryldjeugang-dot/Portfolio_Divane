@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from '../context/LanguageContext'
 import './Hero.css'
 
 function Typewriter({ text }) {
@@ -34,6 +35,8 @@ function Typewriter({ text }) {
 }
 
 export default function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className="hero grid-bg" id="home">
       <div className="hero-bg">
@@ -43,31 +46,28 @@ export default function Hero() {
       <div className="container">
         <div className="hero-badge">
           <span className="dot" />
-          Ouvert aux opportunités
+          {t('hero.badge')}
         </div>
         <h1>
-          <Typewriter text="DIVANE DARYL\nNDJAGA DJEUGANG" />
+          <Typewriter text={t('hero.name')} />
         </h1>
         <p className="hero-subtitle">
-          Étudiant en Cybersécurité, Réseaux &amp; Administration Systèmes
+          {t('hero.subtitle')}
         </p>
         <p className="hero-meta">
-          Futur ingénieur en cybersécurité | Passionné de réseaux et de systèmes
+          {t('hero.meta')}
         </p>
         <div className="hero-tags">
-          <span>Cybersécurité</span>
-          <span>Réseaux</span>
-          <span>Linux</span>
-          <span>Windows Server</span>
-          <span>Python</span>
-          <span>Cloud</span>
+          {t('hero.tags', { returnObjects: true }).map((tag, i) => (
+            <span key={i}>{tag}</span>
+          ))}
         </div>
         <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary">
-            <i className="fas fa-arrow-right" /> Voir mes projets
+            <i className="fas fa-arrow-right" /> {t('hero.btnProjects')}
           </a>
           <a href="/assets/documents/CV_Divane_Daryl.pdf" className="btn btn-outline" download>
-            <i className="fas fa-download" /> Télécharger mon CV
+            <i className="fas fa-download" /> {t('hero.btnCv')}
           </a>
         </div>
       </div>

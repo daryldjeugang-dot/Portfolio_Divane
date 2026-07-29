@@ -1,37 +1,35 @@
 import { useInView } from '../hooks/useInView'
-import { interests } from '../data/content'
+import { useTranslation } from '../context/LanguageContext'
 import './Interests.css'
 
 export default function Interests() {
   const [ref, visible] = useInView()
+  const { t } = useTranslation()
+  const languages = t('interests.languages.items', { returnObjects: true })
+  const interests = t('interests.list', { returnObjects: true })
 
   return (
     <section id="interests" style={{ background: 'var(--bg-secondary)' }}>
       <div className="container">
         <div className={`section-header ${visible ? 'visible' : ''}`} ref={ref}>
-          <div className="label">Atouts</div>
-          <h2>Langues &amp; Centres d'intérêt</h2>
+          <div className="label">{t('interests.label')}</div>
+          <h2>{t('interests.heading')}</h2>
         </div>
         <div className="interests-grid">
           <div className="interests-card">
-            <h4><i className="fas fa-language" /> Langues</h4>
-            <div className="lang-item">
-              <div className="lang-header">
-                <span>Français</span>
-                <span className="level">C1 — Courant</span>
+            <h4><i className="fas fa-language" /> {t('interests.languages.title')}</h4>
+            {languages.map((lang, i) => (
+              <div key={i} className="lang-item">
+                <div className="lang-header">
+                  <span>{lang.name}</span>
+                  <span className="level">{lang.level}</span>
+                </div>
+                <div className="progress-bar"><div className="progress-fill" style={{ width: lang.width }} /></div>
               </div>
-              <div className="progress-bar"><div className="progress-fill" style={{ width: '90%' }} /></div>
-            </div>
-            <div className="lang-item">
-              <div className="lang-header">
-                <span>Anglais</span>
-                <span className="level">B2 — Intermédiaire</span>
-              </div>
-              <div className="progress-bar"><div className="progress-fill" style={{ width: '70%' }} /></div>
-            </div>
+            ))}
           </div>
           <div className="interests-card">
-            <h4><i className="fas fa-heart" /> Centres d'intérêt</h4>
+            <h4><i className="fas fa-heart" /> {t('interests.interestsTitle')}</h4>
             <div className="skill-tags" style={{ marginTop: 0 }}>
               {interests.map((item, i) => (
                 <span key={i} className="skill-tag">{item}</span>

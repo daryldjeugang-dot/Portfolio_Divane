@@ -1,16 +1,17 @@
 import { useInView } from '../hooks/useInView'
-import { aboutText } from '../data/content'
+import { useTranslation } from '../context/LanguageContext'
 import './About.css'
 
 export default function About() {
   const [ref, visible] = useInView()
+  const { t } = useTranslation()
 
   return (
     <section id="about">
       <div className="container">
         <div className={`section-header ${visible ? 'visible' : ''}`} ref={ref}>
-          <div className="label">À propos</div>
-          <h2>Qui suis-je ?</h2>
+          <div className="label">{t('about.label')}</div>
+          <h2>{t('about.heading')}</h2>
         </div>
         <div className="about-grid">
           <div className="about-image">
@@ -18,26 +19,20 @@ export default function About() {
               <img src="/assets/images/photo.jpeg" alt="Divane Daryl Ndjaga Djeugang" className="profile-photo" />
             </div>
             <div className="badge-exp">
-              <div className="num">3+</div>
-              <div className="lbl">Années d'études<br />en informatique</div>
+              <div className="num">{t('about.badge.num')}</div>
+              <div className="lbl">{t('about.badge.label')}</div>
             </div>
           </div>
           <div className="about-text">
-            <h3>Étudiant en <span className="accent">Qualité, Sécurité Internet &amp; Réseau</span></h3>
-            {aboutText.map((p, i) => <p key={i} dangerouslySetInnerHTML={{ __html: p }} />)}
+            <h3>{t('about.subheading')}</h3>
+            {t('about.text', { returnObjects: true }).map((p, i) => <p key={i}>{p}</p>)}
             <div className="about-stats">
-              <div className="about-stat">
-                <div className="num">3+</div>
-                <div className="lbl">Projets réalisés</div>
-              </div>
-              <div className="about-stat">
-                <div className="num">2</div>
-                <div className="lbl">Stages effectués</div>
-              </div>
-              <div className="about-stat">
-                <div className="num">10+</div>
-                <div className="lbl">Technologies maîtrisées</div>
-              </div>
+              {t('about.stats', { returnObjects: true }).map((s, i) => (
+                <div key={i} className="about-stat">
+                  <div className="num">{s.num}</div>
+                  <div className="lbl">{s.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -1,17 +1,19 @@
 import { useInView } from '../hooks/useInView'
-import { projects } from '../data/content'
+import { useTranslation } from '../context/LanguageContext'
 import './Projects.css'
 
 export default function Projects() {
   const [ref, visible] = useInView()
+  const { t } = useTranslation()
+  const projects = t('projects.list', { returnObjects: true })
 
   return (
     <section id="projects">
       <div className="container">
         <div className={`section-header ${visible ? 'visible' : ''}`} ref={ref}>
-          <div className="label">Projets</div>
-          <h2>Réalisations</h2>
-          <p>Des projets concrets alliant cybersécurité, réseaux et développement</p>
+          <div className="label">{t('projects.label')}</div>
+          <h2>{t('projects.heading')}</h2>
+          <p>{t('projects.subtitle')}</p>
         </div>
         <div className="projects-grid">
           {projects.map((p, i) => (

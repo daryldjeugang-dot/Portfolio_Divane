@@ -1,7 +1,10 @@
+import { useTranslation } from '../context/LanguageContext'
 import { personalInfo } from '../data/content'
 import './Footer.css'
 
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer>
       <div className="container">
@@ -17,7 +20,7 @@ export default function Footer() {
           </a>
         </div>
         <p>
-          &copy; {new Date().getFullYear()} {personalInfo.name}. Construit avec{' '}
+          &copy; {new Date().getFullYear()} {personalInfo.name}. {t('footer.text')}{' '}
           <i className="fas fa-heart" style={{ color: 'var(--accent)', fontSize: '0.8rem' }} />.
         </p>
       </div>

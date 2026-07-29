@@ -1,0 +1,236 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Open to opportunities",
+    "name": "DIVANE DARYL\nNDJAGA DJEUGANG",
+    "subtitle": "Student in Cybersecurity, Networks & Systems Administration",
+    "meta": "Future cybersecurity engineer | Passionate about networks and systems",
+    "tags": ["Cybersecurity", "Networks", "Linux", "Windows Server", "Python", "Cloud"],
+    "btnProjects": "View my projects",
+    "btnCv": "Download my CV"
+  },
+  "about": {
+    "label": "About",
+    "heading": "Who am I?",
+    "subheading": "Student in Quality, Internet Security & Network",
+    "accent": "Quality, Internet Security & Network",
+    "text": [
+      "I am a student in the Technological Bachelor's program at IUT de Bandjoun, passionate about cybersecurity, networks, and systems administration. I develop my skills through practical projects and laboratory environments.",
+      "My journey has allowed me to build a solid foundation in networks, Linux/Windows systems, IT security, and development. I am particularly interested in infrastructure security, network analysis, system administration, and automation.",
+      "My goal is to continue growing in the field of cybersecurity and to participate in projects that strengthen the security and reliability of information systems."
+    ],
+    "badge": {
+      "num": "3+",
+      "label": "Years of studies\nin computer science"
+    },
+    "stats": [
+      { "num": "3+", "label": "Projects completed" },
+      { "num": "2", "label": "Internships done" },
+      { "num": "10+", "label": "Technologies mastered" }
+    ]
+  },
+  "skills": {
+    "label": "Skills",
+    "heading": "My areas of expertise",
+    "subtitle": "Cybersecurity, Networks, Systems, Development & Data",
+    "categories": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Cybersecurity",
+        "items": ["Network Security", "Network Filtering", "ACL", "Firewall", "VPN", "NAT", "Network Traffic Analysis", "Network Monitoring", "System Hardening", "Access Control", "Data Protection", "Wireshark", "Nmap", "pfSense", "Vulnerability Assessment"]
+      },
+      {
+        "icon": "fa-network-wired",
+        "title": "Networks",
+        "items": ["TCP/IP", "IPv4", "VLAN", "Routing", "DNS", "DHCP", "NAT", "VPN", "Firewall", "High Availability", "Network Cabling", "Network Administration", "Network Troubleshooting", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3"]
+      },
+      {
+        "icon": "fa-server",
+        "title": "Systems Administration",
+        "items": ["Linux (Ubuntu)", "Kali Linux", "Linux Administration", "User Management", "Permission Management", "Service Management", "Network Configuration", "Automation", "Process Management", "Windows Server", "Active Directory", "GPO / Security Policies", "Centralized Administration", "Docker", "VirtualBox"]
+      },
+      {
+        "icon": "fa-code",
+        "title": "Development",
+        "items": ["Python", "Automation Scripts", "Data Manipulation", "Object-Oriented Programming", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Django", "Git", "GitHub", "REST API", "SQL"]
+      },
+      {
+        "icon": "fa-database",
+        "title": "Data & Blockchain",
+        "items": ["PostgreSQL", "SQL", "Database Creation", "Data Modeling", "Pandas", "Matplotlib", "Exploratory Analysis", "Data Visualization", "Solidity", "Blockchain", "Ethereum", "Sepolia", "MetaMask", "Hardhat", "IPFS"]
+      }
+    ]
+  },
+  "projects": {
+    "label": "Projects",
+    "heading": "My work",
+    "subtitle": "Concrete projects combining cybersecurity, networks and development",
+    "list": [
+      {
+        "icon": "fa-link",
+        "color": "#7c3aed",
+        "title": "DiploChain",
+        "tech": "Blockchain · Ethereum · Solidity",
+        "desc": "Blockchain-based diploma certification and verification platform, guaranteeing the authenticity and traceability of certificates.",
+        "tags": ["Solidity", "Ethereum", "Sepolia", "MetaMask", "Hardhat", "IPFS"]
+      },
+      {
+        "icon": "fa-shield",
+        "color": "#00d4ff",
+        "title": "pfSense Firewall",
+        "tech": "Network · Cybersecurity",
+        "desc": "Installation and configuration of a pfSense firewall with traffic filtering, security rules, NAT, and network monitoring.",
+        "tags": ["pfSense", "Firewall", "NAT", "Filtering", "Monitoring"]
+      },
+      {
+        "icon": "fa-lock",
+        "color": "#00d4ff",
+        "title": "Secure VPN with pfSense",
+        "tech": "Cybersecurity · Network",
+        "desc": "Setup of a secure remote access for mobile users via VPN, with encryption and authentication.",
+        "tags": ["VPN", "pfSense", "Encryption", "Remote Access", "Security"]
+      },
+      {
+        "icon": "fa-diagram-project",
+        "color": "#22c55e",
+        "title": "Active Directory",
+        "tech": "Windows Server · Administration",
+        "desc": "Deployment and configuration of Active Directory with user, group, permission and GPO management.",
+        "tags": ["Windows Server", "Active Directory", "GPO", "Centralized Management"]
+      },
+      {
+        "icon": "fa-globe",
+        "color": "#00d4ff",
+        "title": "DNS & DHCP on Linux",
+        "tech": "Linux · Network",
+        "desc": "Configuration of a DNS and DHCP server to automate IP address management and name resolution on a local network.",
+        "tags": ["Linux", "DNS", "DHCP", "Bind", "ISC DHCP"]
+      },
+      {
+        "icon": "fa-cloud-upload-alt",
+        "color": "#22c55e",
+        "title": "Web High Availability",
+        "tech": "Systems · Network",
+        "desc": "High-availability architecture for web resources with load balancing and disaster recovery.",
+        "tags": ["HA", "Load Balancing", "Failover", "Apache", "Linux"]
+      },
+      {
+        "icon": "fa-code",
+        "color": "#00d4ff",
+        "title": "Web Development",
+        "tech": "Web · Frontend",
+        "desc": "Creation and integration of responsive web pages using HTML, CSS, JavaScript and Tailwind CSS.",
+        "tags": ["HTML", "CSS", "JavaScript", "Tailwind"]
+      }
+    ]
+  },
+  "experience": {
+    "label": "Experience",
+    "heading": "Professional journey",
+    "list": [
+      {
+        "date": "2024",
+        "title": "Internship — Network Scene",
+        "org": "CAMTEL · Bafoussam",
+        "items": [
+          "Assistance with network equipment configuration",
+          "Equipment monitoring and tracking",
+          "Participation in network maintenance",
+          "Connection network support",
+          "Discovery of operator infrastructure"
+        ]
+      },
+      {
+        "date": "2024",
+        "title": "Internship — Web Development",
+        "org": "Worketyamo",
+        "items": [
+          "Development of responsive web pages",
+          "Use of HTML, CSS and JavaScript",
+          "Mockup integration",
+          "Participation in website maintenance and improvement"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "label": "Education",
+    "heading": "Academic background",
+    "list": [
+      {
+        "year": "2025 – 2026 · In progress",
+        "title": "Professional Bachelor's Degree",
+        "school": "Quality, Internet Security & Network — IUT de Bandjoun",
+        "desc": "Specialization in cybersecurity, network administration and information systems security."
+      },
+      {
+        "year": "2023 – 2025",
+        "title": "Advanced Technician's Diploma (BTS)",
+        "school": "Networks and Security — IUES / INSAM, Bafoussam",
+        "desc": "Advanced training in computer networks, security and systems administration."
+      },
+      {
+        "year": "2023",
+        "title": "Scientific Baccalaureate — Series C",
+        "school": "Lycée Classique de Bangangté",
+        "desc": "Scientific degree, major in mathematics and physical sciences."
+      }
+    ]
+  },
+  "interests": {
+    "label": "Assets",
+    "heading": "Languages & Interests",
+    "languages": {
+      "title": "Languages",
+      "items": [
+        { "name": "French", "level": "C1 — Fluent", "width": "90%" },
+        { "name": "English", "level": "B2 — Intermediate", "width": "70%" }
+      ]
+    },
+    "interestsTitle": "Interests",
+    "list": ["Cybersecurity", "Computer Networks", "Linux", "Cloud Computing", "AI / Machine Learning", "Blockchain", "Software Development", "Tech Watch"]
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Get in touch",
+    "subtitle": "Let's talk about your projects and opportunities",
+    "infoHeading": "My contact details",
+    "infoText": "Available to discuss collaborations, internships or opportunities in cybersecurity and networks.",
+    "infoFields": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "github": "GitHub"
+    },
+    "form": {
+      "heading": "Send me a message",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Message subject",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "submit": "Send"
+    },
+    "alert": "Thank you for your message! I will get back to you as soon as possible."
+  },
+  "footer": {
+    "text": "Built with"
+  },
+  "personalInfo": {
+    "title": "Student in Cybersecurity, Networks & Systems Administration",
+    "subtitle": "Future cybersecurity engineer | Passionate about networks and systems",
+    "disponibilite": "from August 2026",
+    "role": "Internship Cybersecurity / Data"
+  }
+}

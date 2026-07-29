@@ -1,16 +1,18 @@
 import { useInView } from '../hooks/useInView'
-import { experiences } from '../data/content'
+import { useTranslation } from '../context/LanguageContext'
 import './Experience.css'
 
 export default function Experience() {
   const [ref, visible] = useInView()
+  const { t } = useTranslation()
+  const experiences = t('experience.list', { returnObjects: true })
 
   return (
     <section id="experience" style={{ background: 'var(--bg-secondary)' }}>
       <div className="container">
         <div className={`section-header ${visible ? 'visible' : ''}`} ref={ref}>
-          <div className="label">Expérience</div>
-          <h2>Parcours professionnel</h2>
+          <div className="label">{t('experience.label')}</div>
+          <h2>{t('experience.heading')}</h2>
         </div>
         <div className="timeline">
           {experiences.map((exp, i) => (

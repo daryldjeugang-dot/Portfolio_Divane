@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../context/ThemeContext'
+import { useTranslation } from '../context/LanguageContext'
 import './Navbar.css'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { theme, toggleTheme } = useTheme()
+  const { t, lang, setLang } = useTranslation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -20,14 +22,16 @@ export default function Navbar() {
   }
 
   const links = [
-    { label: 'Accueil', id: 'home' },
-    { label: 'À propos', id: 'about' },
-    { label: 'Compétences', id: 'skills' },
-    { label: 'Projets', id: 'projects' },
-    { label: 'Expérience', id: 'experience' },
-    { label: 'Formation', id: 'education' },
-    { label: 'Contact', id: 'contact' },
+    { label: t('nav.home'), id: 'home' },
+    { label: t('nav.about'), id: 'about' },
+    { label: t('nav.skills'), id: 'skills' },
+    { label: t('nav.projects'), id: 'projects' },
+    { label: t('nav.experience'), id: 'experience' },
+    { label: t('nav.education'), id: 'education' },
+    { label: t('nav.contact'), id: 'contact' },
   ]
+
+  const toggleLang = () => setLang(lang === 'fr' ? 'en' : 'fr')
 
   return (
     <nav style={{ background: scrolled ? 'rgba(10,10,15,0.95)' : 'rgba(10,10,15,0.85)' }}>
@@ -45,7 +49,12 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Basculer le thème">
+            <button className="lang-toggle-btn" onClick={toggleLang} aria-label="Toggle language">
+              {lang === 'fr' ? 'EN' : 'FR'}
+            </button>
+          </li>
+          <li>
+            <button className="theme-toggle-btn" onClick={toggleTheme} aria-label={lang === 'fr' ? 'Basculer le thème' : 'Toggle theme'}>
               <i className={`fas fa-${theme === 'dark' ? 'sun' : 'moon'}`} />
             </button>
           </li>

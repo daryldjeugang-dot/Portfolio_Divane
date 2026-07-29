@@ -1,16 +1,18 @@
 import { useInView } from '../hooks/useInView'
-import { education } from '../data/content'
+import { useTranslation } from '../context/LanguageContext'
 import './Education.css'
 
 export default function Education() {
   const [ref, visible] = useInView()
+  const { t } = useTranslation()
+  const education = t('education.list', { returnObjects: true })
 
   return (
     <section id="education">
       <div className="container">
         <div className={`section-header ${visible ? 'visible' : ''}`} ref={ref}>
-          <div className="label">Formation</div>
-          <h2>Mon parcours académique</h2>
+          <div className="label">{t('education.label')}</div>
+          <h2>{t('education.heading')}</h2>
         </div>
         <div className="edu-grid">
           {education.map((edu, i) => (

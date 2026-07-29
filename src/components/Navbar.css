@@ -57,6 +57,25 @@ nav .container {
 .nav-links a:hover::after { width: 100%; }
 .nav-links a:hover { color: var(--text-primary); }
 
+.lang-toggle-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.lang-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .theme-toggle-btn {
   background: var(--bg-card);
   border: 1px solid var(--border);
