@@ -176,7 +176,7 @@
   .hero-text { display: flex; flex-direction: column; align-items: center; max-width: none; padding-right: 0; }
   .hero-image { position: static; transform: none; }
   .hero-image-wrapper img { width: 240px; height: 240px; }
-  .float-icon { display: none; }
+  .float-icon { display: inline-block !important; font-size: 0.85rem !important; }
   .hero-subtitle, .hero-meta { max-width: none; }
   .hero-tags { justify-content: center; }
   .hero-buttons { justify-content: center; }

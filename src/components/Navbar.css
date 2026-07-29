@@ -103,6 +103,12 @@ nav .container {
   color: var(--accent);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .nav-toggle {
   display: none;
   background: none;

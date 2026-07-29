@@ -55,25 +55,23 @@ export default function Navbar() {
         <button className="nav-logo" onClick={() => scrollTo('home')}>
           &lt;<span>daryl</span>/&gt;
         </button>
-        <button className="nav-toggle" onClick={() => setOpen(o => !o)} aria-label="Menu">
-          <i className={`fas fa-${open ? 'times' : 'bars'}`} />
-        </button>
+        <div className="nav-actions">
+          <button className="lang-toggle-btn" onClick={toggleLang} aria-label="Toggle language">
+            {lang === 'fr' ? 'EN' : 'FR'}
+          </button>
+          <button className="theme-toggle-btn" onClick={toggleTheme} aria-label={lang === 'fr' ? 'Basculer le thème' : 'Toggle theme'}>
+            <i className={`fas fa-${theme === 'dark' ? 'sun' : 'moon'}`} />
+          </button>
+          <button className="nav-toggle" onClick={() => setOpen(o => !o)} aria-label="Menu">
+            <i className={`fas fa-${open ? 'times' : 'bars'}`} />
+          </button>
+        </div>
         <ul className={`nav-links ${open ? 'active' : ''}`}>
           {links.map(l => (
             <li key={l.id}>
               <a href={`#${l.id}`} className={active === l.id ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
             </li>
           ))}
-          <li>
-            <button className="lang-toggle-btn" onClick={toggleLang} aria-label="Toggle language">
-              {lang === 'fr' ? 'EN' : 'FR'}
-            </button>
-          </li>
-          <li>
-            <button className="theme-toggle-btn" onClick={toggleTheme} aria-label={lang === 'fr' ? 'Basculer le thème' : 'Toggle theme'}>
-              <i className={`fas fa-${theme === 'dark' ? 'sun' : 'moon'}`} />
-            </button>
-          </li>
         </ul>
       </div>
     </nav>
