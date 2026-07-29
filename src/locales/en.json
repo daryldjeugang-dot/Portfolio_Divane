@@ -6,6 +6,7 @@
     "projects": "Projects",
     "experience": "Experience",
     "education": "Education",
+    "certifications": "Certifications",
     "contact": "Contact"
   },
   "hero": {
@@ -223,6 +224,37 @@
       "submit": "Send"
     },
     "alert": "Thank you for your message! I will get back to you as soon as possible."
+  },
+  "certifications": {
+    "label": "Certifications",
+    "heading": "My certifications",
+    "subtitle": "Skills validated by recognized certifications",
+    "list": [
+      {
+        "title": "Cloud",
+        "issuer": "Cloud",
+        "desc": "Cloud Computing certification covering cloud fundamentals, deployment, and infrastructure management.",
+        "file": "cloud.pdf"
+      },
+      {
+        "title": "Git",
+        "issuer": "Git",
+        "desc": "Version control certification with Git, covering workflow, branching, merging, and collaboration.",
+        "file": "git.pdf"
+      },
+      {
+        "title": "Java",
+        "issuer": "Java",
+        "desc": "Java programming certification covering OOP, data structures, and application development.",
+        "file": "java.pdf"
+      },
+      {
+        "title": "Python",
+        "issuer": "Python",
+        "desc": "Python programming certification covering fundamentals, data manipulation, and automation.",
+        "file": "python.pdf"
+      }
+    ]
   },
   "footer": {
     "text": "Built with"

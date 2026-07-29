@@ -6,6 +6,7 @@
     "projects": "Projets",
     "experience": "Expérience",
     "education": "Formation",
+    "certifications": "Certificats",
     "contact": "Contact"
   },
   "hero": {
@@ -223,6 +224,37 @@
       "submit": "Envoyer"
     },
     "alert": "Merci pour votre message ! Je vous répondrai dans les plus brefs délais."
+  },
+  "certifications": {
+    "label": "Certificats",
+    "heading": "Mes certifications",
+    "subtitle": "Compétences validées par des certifications reconnues",
+    "list": [
+      {
+        "title": "Cloud",
+        "issuer": "Cloud",
+        "desc": "Certification en Cloud Computing couvrant les fondamentaux des services cloud, le déploiement et la gestion d'infrastructures.",
+        "file": "cloud.pdf"
+      },
+      {
+        "title": "Git",
+        "issuer": "Git",
+        "desc": "Certification en contrôle de version avec Git, couvrant le workflow, les branches, les merges et la collaboration.",
+        "file": "git.pdf"
+      },
+      {
+        "title": "Java",
+        "issuer": "Java",
+        "desc": "Certification en programmation Java, couvrant la POO, les structures de données et le développement d'applications.",
+        "file": "java.pdf"
+      },
+      {
+        "title": "Python",
+        "issuer": "Python",
+        "desc": "Certification en programmation Python, couvrant les fondamentaux, la manipulation de données et l'automatisation.",
+        "file": "python.pdf"
+      }
+    ]
   },
   "footer": {
     "text": "Construit avec"
