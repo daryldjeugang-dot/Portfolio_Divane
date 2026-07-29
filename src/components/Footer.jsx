@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="footer-links">
-          <a href="https://github.com/daryldjeugang" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/daryldjeugang-dot" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i className="fab fa-github" />
           </a>
           <a href="#" aria-label="LinkedIn">

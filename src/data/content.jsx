@@ -3,6 +3,6 @@ export const personalInfo = {
   nameShort: 'daryl',
   email: 'daryldjeugang@gmail.com',
   phone: ['+237 680 29 28 80', '+237 693 36 79 88'],
-  github: 'https://github.com/daryldjeugang',
+  github: 'https://github.com/daryldjeugang-dot',
   location: 'Bandjoun, Cameroun',
 }
