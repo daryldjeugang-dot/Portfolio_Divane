@@ -20,8 +20,7 @@ export default function Footer() {
           </a>
         </div>
         <p>
-          &copy; {new Date().getFullYear()} {personalInfo.name}. {t('footer.text')}{' '}
-          <i className="fas fa-heart" style={{ color: 'var(--accent)', fontSize: '0.8rem' }} />.
+          &copy; {new Date().getFullYear()} {personalInfo.name}.
         </p>
       </div>
     </footer>

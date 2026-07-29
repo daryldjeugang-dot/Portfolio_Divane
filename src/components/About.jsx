@@ -16,7 +16,7 @@ export default function About() {
         <div className="about-grid">
           <div className="about-image">
             <div className="placeholder">
-              <img src="/assets/images/photo.jpeg" alt="Divane Daryl Ndjaga Djeugang" className="profile-photo" />
+              <img src="/assets/images/photo_divane.png" alt="Divane Daryl Ndjaga Djeugang" className="profile-photo" />
             </div>
             <div className="badge-exp">
               <div className="num">{t('about.badge.num')}</div>

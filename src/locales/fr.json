@@ -6,7 +6,7 @@
     "projects": "Projets",
     "experience": "Expérience",
     "education": "Formation",
-    "certifications": "Certificats",
+    "certifications": "Badges",
     "contact": "Contact"
   },
   "hero": {
@@ -226,9 +226,9 @@
     "alert": "Merci pour votre message ! Je vous répondrai dans les plus brefs délais."
   },
   "certifications": {
-    "label": "Certificats",
-    "heading": "Mes certifications",
-    "subtitle": "Compétences validées par des certifications reconnues",
+    "label": "Badges",
+    "heading": "Mes badges",
+    "subtitle": "Compétences validées par des badges",
     "list": [
       {
         "title": "Cloud",

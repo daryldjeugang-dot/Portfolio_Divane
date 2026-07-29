@@ -6,13 +6,28 @@ import './Navbar.css'
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [active, setActive] = useState('home')
   const { theme, toggleTheme } = useTheme()
   const { t, lang, setLang } = useTranslation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const ids = ['home', 'about', 'skills', 'projects', 'experience', 'education', 'certifications', 'contact']
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActive(entry.target.id)
+      })
+    }, { rootMargin: '-40% 0px -55% 0px' })
+    ids.forEach(id => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+    return () => observer.disconnect()
   }, [])
 
   const scrollTo = (id) => {
@@ -35,7 +50,7 @@ export default function Navbar() {
   const toggleLang = () => setLang(lang === 'fr' ? 'en' : 'fr')
 
   return (
-    <nav style={{ background: scrolled ? 'rgba(10,10,15,0.95)' : 'rgba(10,10,15,0.85)' }}>
+    <nav className={scrolled ? 'scrolled' : ''}>
       <div className="container">
         <button className="nav-logo" onClick={() => scrollTo('home')}>
           &lt;<span>daryl</span>/&gt;
@@ -46,7 +61,7 @@ export default function Navbar() {
         <ul className={`nav-links ${open ? 'active' : ''}`}>
           {links.map(l => (
             <li key={l.id}>
-              <a href={`#${l.id}`} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
+              <a href={`#${l.id}`} className={active === l.id ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
             </li>
           ))}
           <li>

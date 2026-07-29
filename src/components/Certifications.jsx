@@ -5,7 +5,7 @@ import './Certifications.css'
 export default function Certifications() {
   const [ref, visible] = useInView()
   const { t } = useTranslation()
-  const certs = t('certifications.list', { returnObjects: true })
+  const badges = t('certifications.list', { returnObjects: true })
 
   return (
     <section id="certifications" style={{ background: 'var(--bg-secondary)' }}>
@@ -16,7 +16,7 @@ export default function Certifications() {
           <p>{t('certifications.subtitle')}</p>
         </div>
         <div className="certs-grid">
-          {certs.map((cert, i) => (
+          {badges.map((cert, i) => (
             <CertCard key={i} cert={cert} />
           ))}
         </div>
@@ -36,7 +36,7 @@ function CertCard({ cert }) {
       <h4>{cert.title}</h4>
       <div className="cert-issuer">{cert.issuer}</div>
       <p>{cert.desc}</p>
-      <a href={`/assets/documents/${cert.file}`} className="btn btn-outline cert-btn" download target="_blank">
+      <a href={`/assets/documents/badges/${cert.file}`} className="btn btn-outline cert-btn" download target="_blank">
         <i className="fas fa-download" /> PDF
       </a>
     </div>
