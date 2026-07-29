@@ -1,0 +1,41 @@
+#skills {
+  background: var(--bg-secondary);
+  transition: background var(--transition);
+}
+
+.skills-categories { display: grid; gap: 40px; }
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-category h3 i { color: var(--accent); }
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  padding: 8px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  cursor: default;
+}
+
+.skill-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+}
