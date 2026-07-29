@@ -36,6 +36,12 @@ function Typewriter({ text }) {
 
 export default function Hero() {
   const { t } = useTranslation()
+  const [key, setKey] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => setKey(k => k + 1), 7000)
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <section className="hero grid-bg" id="home">
@@ -49,7 +55,7 @@ export default function Hero() {
           {t('hero.badge')}
         </div>
         <h1>
-          <Typewriter text={t('hero.name')} />
+          <Typewriter key={key} text={t('hero.name')} />
         </h1>
         <p className="hero-subtitle">
           {t('hero.subtitle')}
