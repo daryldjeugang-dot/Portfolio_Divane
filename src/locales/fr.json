@@ -12,7 +12,7 @@
   "hero": {
     "badge": "Ouvert aux opportunités",
     "name": "DIVANE DARYL\nNDJAGA DJEUGANG",
-    "subtitle": "Étudiant en Cybersécurité, Réseaux & Administration Systèmes",
+    "subtitle": "Ingénieur de travaux en Cybersécurité, Réseaux & Administration Systèmes",
     "meta": "Futur ingénieur en cybersécurité | Passionné de réseaux et de systèmes",
     "tags": ["Cybersécurité", "Réseaux", "Linux", "Windows Server", "Python", "Cloud"],
     "btnProjects": "Voir mes projets",
@@ -21,7 +21,7 @@
   "about": {
     "label": "À propos",
     "heading": "Qui suis-je ?",
-    "subheading": "Étudiant en Qualité, Sécurité Internet & Réseau",
+    "subheading": "Ingénieur de travaux en Qualité, Sécurité Internet & Réseau",
     "accent": "Qualité, Sécurité Internet & Réseau",
     "text": [
       "Passionné par la cybersécurité, les réseaux et l'administration des systèmes, je développe mes compétences à travers des projets pratiques et des environnements de laboratoire.",
@@ -150,7 +150,7 @@
         ]
       },
       {
-        "date": "2024",
+        "date": "2025",
         "title": "Stage — Développement Web",
         "org": "Worketyamo",
         "items": [
@@ -167,7 +167,7 @@
     "heading": "Mon parcours académique",
     "list": [
       {
-        "year": "2025 – 2026 · En cours",
+        "year": "2025 – 2026",
         "title": "Licence Technologique",
         "school": "Qualité, Sécurité Internet & Réseau — IUT de Bandjoun",
         "desc": "Spécialisation en cybersécurité, administration réseau et sécurité des systèmes d'information."
@@ -261,7 +261,7 @@
     "text": "Construit avec"
   },
   "personalInfo": {
-    "title": "Étudiant en Cybersécurité, Réseaux & Administration Systèmes",
+    "title": "Ingénieur de travaux en Cybersécurité, Réseaux & Administration Systèmes",
     "subtitle": "Futur ingénieur en cybersécurité | Passionné de réseaux et de systèmes",
     "disponibilite": "dès août 2026",
     "role": "Stage Cybersécurité / Data"

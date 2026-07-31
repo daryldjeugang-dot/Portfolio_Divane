@@ -12,7 +12,7 @@
   "hero": {
     "badge": "Open to opportunities",
     "name": "DIVANE DARYL\nNDJAGA DJEUGANG",
-    "subtitle": "Student in Cybersecurity, Networks & Systems Administration",
+    "subtitle": "Works Engineer in Cybersecurity, Networks & Systems Administration",
     "meta": "Future cybersecurity engineer | Passionate about networks and systems",
     "tags": ["Cybersecurity", "Networks", "Linux", "Windows Server", "Python", "Cloud"],
     "btnProjects": "View my projects",
@@ -21,7 +21,7 @@
   "about": {
     "label": "About",
     "heading": "Who am I?",
-    "subheading": "Student in Quality, Internet Security & Network",
+    "subheading": "Works Engineer in Quality, Internet Security & Network",
     "accent": "Quality, Internet Security & Network",
     "text": [
       "Passionate about cybersecurity, networks, and systems administration, I develop my skills through practical projects and laboratory environments.",
@@ -150,7 +150,7 @@
         ]
       },
       {
-        "date": "2024",
+        "date": "2025",
         "title": "Internship — Web Development",
         "org": "Worketyamo",
         "items": [
@@ -167,7 +167,7 @@
     "heading": "Academic background",
     "list": [
       {
-        "year": "2025 – 2026 · In progress",
+        "year": "2025 – 2026",
         "title": "Professional Bachelor's Degree",
         "school": "Quality, Internet Security & Network — IUT de Bandjoun",
         "desc": "Specialization in cybersecurity, network administration and information systems security."
@@ -261,7 +261,7 @@
     "text": "Built with"
   },
   "personalInfo": {
-    "title": "Student in Cybersecurity, Networks & Systems Administration",
+    "title": "Works Engineer in Cybersecurity, Networks & Systems Administration",
     "subtitle": "Future cybersecurity engineer | Passionate about networks and systems",
     "disponibilite": "from August 2026",
     "role": "Internship Cybersecurity / Data"
