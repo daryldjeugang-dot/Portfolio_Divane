@@ -232,6 +232,12 @@
     "subtitle": "Compétences validées par des badges",
     "list": [
       {
+        "title": "Certificate of Completion",
+        "issuer": "Anthropic Education",
+        "desc": "Certificat de réussite délivré par Anthropic Education, attestant de la complétion d'une formation sur les technologies d'intelligence artificielle.",
+        "file": "anthropic.pdf"
+      },
+      {
         "title": "Cloud",
         "issuer": "Cloud",
         "desc": "Certification en Cloud Computing couvrant les fondamentaux des services cloud, le déploiement et la gestion d'infrastructures.",

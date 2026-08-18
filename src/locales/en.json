@@ -232,6 +232,12 @@
     "subtitle": "Skills validated by badges",
     "list": [
       {
+        "title": "Certificate of Completion",
+        "issuer": "Anthropic Education",
+        "desc": "Certificate of completion issued by Anthropic Education, attesting to the completion of a course on artificial intelligence technologies.",
+        "file": "anthropic.pdf"
+      },
+      {
         "title": "Cloud",
         "issuer": "Cloud",
         "desc": "Cloud Computing certification covering cloud fundamentals, deployment, and infrastructure management.",
