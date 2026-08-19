@@ -61,7 +61,7 @@
       {
         "icon": "fa-code",
         "title": "Development",
-        "items": ["Python", "Automation Scripts", "Data Manipulation", "Object-Oriented Programming", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Django", "Git", "GitHub", "REST API", "SQL", "MQL5", "Algorithmic Trading"]
+        "items": ["Python", "Automation Scripts", "Data Manipulation", "Object-Oriented Programming", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Django", "Git", "GitHub", "REST API", "SQL"]
       },
       {
         "icon": "fa-database",
@@ -130,14 +130,6 @@
         "tech": "IoT · Big Data · Machine Learning",
         "desc": "Group project: IoT platform with real-time data collection, stream processing with Kafka and Apache Spark, and machine learning analysis.",
         "tags": ["IoT", "Kafka", "Apache Spark", "Machine Learning", "Python"]
-      },
-      {
-        "icon": "fa-chart-line",
-        "color": "#f59e0b",
-        "title": "Algorithmic Trading",
-        "tech": "MQL5 · Automation",
-        "desc": "Development of an algorithmic trading Expert Advisor (EA) in MQL5 for MetaTrader: automated strategies, risk management and backtesting.",
-        "tags": ["MQL5", "MetaTrader", "Algorithmic Trading", "Automation"]
       },
       {
         "icon": "fa-code",
