@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
 import { useTranslation } from '../context/LanguageContext'
 import './Projects.css'
@@ -15,8 +16,11 @@ const techIcons = [
 
 export default function Projects() {
   const [ref, visible] = useInView()
+  const [showAll, setShowAll] = useState(false)
   const { t } = useTranslation()
   const projects = t('projects.list', { returnObjects: true })
+  const featured = projects.slice(0, 4)
+  const more = projects.slice(4)
 
   return (
     <section id="projects" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -35,10 +39,25 @@ export default function Projects() {
           <p>{t('projects.subtitle')}</p>
         </div>
         <div className="projects-grid">
-          {projects.map((p, i) => (
+          {featured.map((p, i) => (
             <ProjectCard key={i} project={p} />
           ))}
         </div>
+        {more.length > 0 && (
+          <div className="projects-more" style={{ marginTop: '32px', textAlign: 'center' }}>
+            <button className="btn btn-outline" onClick={() => setShowAll(!showAll)}>
+              <i className={`fas ${showAll ? 'fa-chevron-up' : 'fa-chevron-down'}`} />{' '}
+              {showAll ? t('projects.less') : t('projects.more')}
+            </button>
+            {showAll && (
+              <div className="projects-more-list">
+                {more.map((p, i) => (
+                  <CompactProject key={i} project={p} />
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </section>
   )
@@ -90,6 +109,28 @@ function ProjectCard({ project }) {
       </div>
       <div className="tags">
         {project.tags.map((t, i) => <span key={i}>{t}</span>)}
+      </div>
+    </div>
+  )
+}
+
+function CompactProject({ project }) {
+  const [ref, visible] = useInView()
+
+  return (
+    <div className={`compact-project ${visible ? 'visible' : ''}`} ref={ref}>
+      <div className="compact-icon" style={{ background: `${project.color}20`, color: project.color }}>
+        <i className={`fas ${project.icon}`} />
+      </div>
+      <div className="compact-body">
+        <div className="compact-head">
+          <h4>{project.title}</h4>
+          <div className="tech">{project.tech}</div>
+        </div>
+        <p>{project.desc}</p>
+        <div className="tags">
+          {project.tags.map((t, i) => <span key={i}>{t}</span>)}
+        </div>
       </div>
     </div>
   )

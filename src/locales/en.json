@@ -74,6 +74,8 @@
     "label": "Projects",
     "heading": "My work",
     "subtitle": "Concrete projects combining cybersecurity, networks and development",
+    "more": "See more projects",
+    "less": "See less",
     "list": [
       {
         "icon": "fa-link",
@@ -82,6 +84,30 @@
         "tech": "Blockchain · Ethereum · Solidity",
         "desc": "Blockchain-based diploma certification and verification platform, guaranteeing the authenticity and traceability of certificates.",
         "tags": ["Solidity", "Ethereum", "Sepolia", "MetaMask", "Hardhat", "IPFS"]
+      },
+      {
+        "icon": "fa-phone",
+        "color": "#3b82f6",
+        "title": "IP Telephony Server",
+        "tech": "VoIP · IP Telephony",
+        "desc": "Deployment and configuration of an IP telephony server (Elastix/Asterisk): SIP extension management, internal and external calls, voicemail, and a corporate phone switchboard.",
+        "tags": ["Asterisk", "Elastix", "VoIP", "SIP", "IP Telephony"]
+      },
+      {
+        "icon": "fa-network-wired",
+        "color": "#00d4ff",
+        "title": "Enterprise Network Infrastructure",
+        "tech": "MikroTik · Linux · Infrastructure",
+        "desc": "Complete installation and configuration of an enterprise network on MikroTik RouterOS: Wi-Fi, DNS and DHCP servers, filtering rules, user management, backups and captive portal.",
+        "tags": ["MikroTik", "RouterOS", "WiFi", "DNS", "DHCP", "Filtering", "Users", "Backup", "Captive Portal"]
+      },
+      {
+        "icon": "fa-microchip",
+        "color": "#7c3aed",
+        "title": "Manichicks",
+        "tech": "IoT · Big Data · Machine Learning",
+        "desc": "Group project: IoT platform with real-time data collection, stream processing with Kafka and Apache Spark, and machine learning analysis.",
+        "tags": ["IoT", "Kafka", "Apache Spark", "Machine Learning", "Python"]
       },
       {
         "icon": "fa-shield",
@@ -100,36 +126,12 @@
         "tags": ["Windows Server", "Active Directory", "GPO", "Centralized Management"]
       },
       {
-        "icon": "fa-network-wired",
-        "color": "#00d4ff",
-        "title": "Enterprise Network Infrastructure",
-        "tech": "MikroTik · Linux · Infrastructure",
-        "desc": "Complete installation and configuration of an enterprise network on MikroTik RouterOS: Wi-Fi, DNS and DHCP servers, filtering rules, user management, backups and captive portal.",
-        "tags": ["MikroTik", "RouterOS", "WiFi", "DNS", "DHCP", "Filtering", "Users", "Backup", "Captive Portal"]
-      },
-      {
         "icon": "fa-cloud-upload-alt",
         "color": "#22c55e",
         "title": "Web High Availability",
         "tech": "Systems · Network",
         "desc": "High-availability architecture for web resources with load balancing and disaster recovery.",
         "tags": ["HA", "Load Balancing", "Failover", "Apache", "Linux"]
-      },
-      {
-        "icon": "fa-phone",
-        "color": "#3b82f6",
-        "title": "IP Telephony Server",
-        "tech": "VoIP · IP Telephony",
-        "desc": "Deployment and configuration of an IP telephony server (Elastix/Asterisk): SIP extension management, internal and external calls, voicemail, and a corporate phone switchboard.",
-        "tags": ["Asterisk", "Elastix", "VoIP", "SIP", "IP Telephony"]
-      },
-      {
-        "icon": "fa-microchip",
-        "color": "#7c3aed",
-        "title": "Manichicks",
-        "tech": "IoT · Big Data · Machine Learning",
-        "desc": "Group project: IoT platform with real-time data collection, stream processing with Kafka and Apache Spark, and machine learning analysis.",
-        "tags": ["IoT", "Kafka", "Apache Spark", "Machine Learning", "Python"]
       },
       {
         "icon": "fa-code",
