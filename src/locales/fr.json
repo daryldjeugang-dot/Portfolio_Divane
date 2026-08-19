@@ -51,7 +51,7 @@
       {
         "icon": "fa-network-wired",
         "title": "Réseaux",
-        "items": ["TCP/IP", "IPv4", "VLAN", "Routage", "DNS", "DHCP", "NAT", "VPN", "Pare-feu", "Haute disponibilité", "Câblage réseau", "Administration réseau", "Dépannage réseau", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3"]
+        "items": ["TCP/IP", "IPv4", "VLAN", "Routage", "DNS", "DHCP", "NAT", "VPN", "Pare-feu", "Haute disponibilité", "Câblage réseau", "Administration réseau", "Dépannage réseau", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3", "VoIP", "Téléphonie IP", "Wi-Fi", "Portail captif", "Sauvegarde"]
       },
       {
         "icon": "fa-server",
@@ -122,6 +122,22 @@
         "tech": "Systèmes · Réseau",
         "desc": "Architecture de haute disponibilité pour ressources web avec équilibrage de charge et reprise après incident.",
         "tags": ["HA", "Load Balancing", "Failover", "Apache", "Linux"]
+      },
+      {
+        "icon": "fa-phone",
+        "color": "#3b82f6",
+        "title": "Serveur de Téléphonie IP",
+        "tech": "VoIP · Téléphonie IP",
+        "desc": "Déploiement et configuration d'un serveur de téléphonie IP (Elastix/Asterisk) : gestion des extensions SIP, appels internes et externes, messagerie vocale et standard téléphonique d'entreprise.",
+        "tags": ["Asterisk", "Elastix", "VoIP", "SIP", "Téléphonie IP"]
+      },
+      {
+        "icon": "fa-network-wired",
+        "color": "#22c55e",
+        "title": "Réseau d'Entreprise",
+        "tech": "Réseau · Infrastructure",
+        "desc": "Installation et configuration complète d'un réseau d'entreprise : Wi-Fi, DNS, DHCP, règles de filtrage, gestion des utilisateurs, sauvegardes et portail captif.",
+        "tags": ["WiFi", "DNS", "DHCP", "Filtrage", "Utilisateurs", "Backup", "Portail captif"]
       },
       {
         "icon": "fa-code",

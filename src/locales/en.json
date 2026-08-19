@@ -51,7 +51,7 @@
       {
         "icon": "fa-network-wired",
         "title": "Networks",
-        "items": ["TCP/IP", "IPv4", "VLAN", "Routing", "DNS", "DHCP", "NAT", "VPN", "Firewall", "High Availability", "Network Cabling", "Network Administration", "Network Troubleshooting", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3"]
+        "items": ["TCP/IP", "IPv4", "VLAN", "Routing", "DNS", "DHCP", "NAT", "VPN", "Firewall", "High Availability", "Network Cabling", "Network Administration", "Network Troubleshooting", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3", "VoIP", "IP Telephony", "Wi-Fi", "Captive Portal", "Backup"]
       },
       {
         "icon": "fa-server",
@@ -122,6 +122,22 @@
         "tech": "Systems · Network",
         "desc": "High-availability architecture for web resources with load balancing and disaster recovery.",
         "tags": ["HA", "Load Balancing", "Failover", "Apache", "Linux"]
+      },
+      {
+        "icon": "fa-phone",
+        "color": "#3b82f6",
+        "title": "IP Telephony Server",
+        "tech": "VoIP · IP Telephony",
+        "desc": "Deployment and configuration of an IP telephony server (Elastix/Asterisk): SIP extension management, internal and external calls, voicemail, and a corporate phone switchboard.",
+        "tags": ["Asterisk", "Elastix", "VoIP", "SIP", "IP Telephony"]
+      },
+      {
+        "icon": "fa-network-wired",
+        "color": "#22c55e",
+        "title": "Enterprise Network",
+        "tech": "Network · Infrastructure",
+        "desc": "Complete installation and configuration of an enterprise network: Wi-Fi, DNS, DHCP, filtering rules, user management, backups and captive portal.",
+        "tags": ["WiFi", "DNS", "DHCP", "Filtering", "Users", "Backup", "Captive Portal"]
       },
       {
         "icon": "fa-code",
