@@ -1,23 +1,38 @@
+import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
 import { useTranslation } from '../context/LanguageContext'
 import { personalInfo } from '../data/content'
 import './Contact.css'
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+
 export default function Contact() {
   const [ref, visible] = useInView()
+  const [status, setStatus] = useState('idle')
   const { t } = useTranslation()
   const fields = t('contact.infoFields', { returnObjects: true })
   const form = t('contact.form', { returnObjects: true })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setStatus('sending')
     const fd = new FormData(e.target)
-    const name = fd.get('name')
-    const email = fd.get('email')
-    const subject = fd.get('subject')
-    const message = fd.get('message')
-    const body = `Nom: ${name}\nEmail: ${email}\n\n${message}`
-    window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    fd.append('_subject', fd.get('subject') || `Portfolio - ${personalInfo.name}`)
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: fd,
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        setStatus('success')
+        e.target.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -103,9 +118,20 @@ export default function Contact() {
                 <label htmlFor="message">{form.message}</label>
                 <textarea id="message" name="message" placeholder={form.messagePlaceholder} required />
               </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                <i className="fas fa-paper-plane" /> {form.submit}
+              <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} disabled={status === 'sending'}>
+                <i className={`fas ${status === 'sending' ? 'fa-spinner fa-spin' : 'fa-paper-plane'}`} /> {form.submit}
               </button>
+              {status === 'success' && (
+                <div className="form-alert form-alert-success">
+                  <i className="fas fa-circle-check" /> {t('contact.alert')}
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="form-alert form-alert-error">
+                  <i className="fas fa-circle-exclamation" /> {t('contact.alertError')}
+                  <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+                </div>
+              )}
             </form>
           </div>
         </div>

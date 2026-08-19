@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daryldjeugang-dot.github.io/Portfolio_Divane/sitemap.xml

@@ -34,7 +34,7 @@ function CertCard({ cert }) {
         <i className="fas fa-certificate" />
       </div>
       <h4>{cert.title}</h4>
-      <div className="cert-issuer">{cert.issuer}</div>
+      <div className="cert-issuer">{cert.issuer}{cert.year ? ` · ${cert.year}` : ''}</div>
       <p>{cert.desc}</p>
       <a href={`/assets/documents/badges/${cert.file}`} className="btn btn-outline cert-btn" download target="_blank">
         <i className="fas fa-download" /> PDF

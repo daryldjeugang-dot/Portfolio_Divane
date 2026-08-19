@@ -51,7 +51,7 @@
       {
         "icon": "fa-network-wired",
         "title": "Réseaux",
-        "items": ["TCP/IP", "IPv4", "VLAN", "Routage", "DNS", "DHCP", "NAT", "VPN", "Pare-feu", "Haute disponibilité", "Câblage réseau", "Administration réseau", "Dépannage réseau", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3", "VoIP", "Téléphonie IP", "Wi-Fi", "Portail captif", "Sauvegarde"]
+        "items": ["TCP/IP", "IPv4", "VLAN", "Routage", "DNS", "DHCP", "NAT", "VPN", "Pare-feu", "Haute disponibilité", "Câblage réseau", "Administration réseau", "Dépannage réseau", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3", "MikroTik", "RouterOS", "Winbox", "VoIP", "Téléphonie IP", "Wi-Fi", "Portail captif", "Sauvegarde"]
       },
       {
         "icon": "fa-server",
@@ -61,12 +61,12 @@
       {
         "icon": "fa-code",
         "title": "Développement",
-        "items": ["Python", "Scripts d'automatisation", "Manipulation de données", "Programmation orientée objet", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Django", "Git", "GitHub", "API REST", "SQL"]
+        "items": ["Python", "Scripts d'automatisation", "Manipulation de données", "Programmation orientée objet", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Django", "Git", "GitHub", "API REST", "SQL", "MQL5", "Trading algorithmique"]
       },
       {
         "icon": "fa-database",
         "title": "Données & Blockchain",
-        "items": ["PostgreSQL", "SQL", "Création de bases de données", "Modélisation de données", "Pandas", "Matplotlib", "Analyse exploratoire", "Visualisation de données", "Solidité", "Blockchain", "Ethereum", "Sepolia", "MetaMask", "Hardhat", "IPFS"]
+        "items": ["PostgreSQL", "SQL", "Création de bases de données", "Modélisation de données", "Pandas", "Matplotlib", "Analyse exploratoire", "Visualisation de données", "Kafka", "Apache Spark", "Machine Learning", "IoT", "Solidité", "Blockchain", "Ethereum", "Sepolia", "MetaMask", "Hardhat", "IPFS"]
       }
     ]
   },
@@ -86,18 +86,10 @@
       {
         "icon": "fa-shield",
         "color": "#00d4ff",
-        "title": "Pare-feu pfSense",
+        "title": "Sécurité Réseau pfSense",
         "tech": "Réseau · Cybersécurité",
-        "desc": "Installation et configuration d'un pare-feu pfSense avec filtrage du trafic, règles de sécurité, NAT et surveillance réseau.",
-        "tags": ["pfSense", "Pare-feu", "NAT", "Filtrage", "Surveillance"]
-      },
-      {
-        "icon": "fa-lock",
-        "color": "#00d4ff",
-        "title": "VPN Sécurisé avec pfSense",
-        "tech": "Cybersécurité · Réseau",
-        "desc": "Mise en place d'un accès distant sécurisé pour utilisateurs nomades via VPN, avec chiffrement et authentification.",
-        "tags": ["VPN", "pfSense", "Chiffrement", "Accès distant", "Sécurité"]
+        "desc": "Installation et configuration d'un pare-feu pfSense : filtrage du trafic, règles de sécurité, NAT, surveillance réseau et VPN pour un accès distant sécurisé et chiffré.",
+        "tags": ["pfSense", "Pare-feu", "Filtrage", "NAT", "Surveillance", "VPN", "Chiffrement", "Accès distant"]
       },
       {
         "icon": "fa-diagram-project",
@@ -108,12 +100,12 @@
         "tags": ["Windows Server", "Active Directory", "GPO", "Gestion centralisée"]
       },
       {
-        "icon": "fa-globe",
+        "icon": "fa-network-wired",
         "color": "#00d4ff",
-        "title": "DNS & DHCP sous Linux",
-        "tech": "Linux · Réseau",
-        "desc": "Configuration d'un serveur DNS et DHCP pour automatiser la gestion des adresses IP et la résolution de noms sur un réseau local.",
-        "tags": ["Linux", "DNS", "DHCP", "Bind", "ISC DHCP"]
+        "title": "Infrastructure Réseau d'Entreprise",
+        "tech": "MikroTik · Linux · Infrastructure",
+        "desc": "Installation et configuration complète d'un réseau d'entreprise sur MikroTik RouterOS : Wi-Fi, serveur DNS et DHCP, règles de filtrage, gestion des utilisateurs, sauvegardes et portail captif.",
+        "tags": ["MikroTik", "RouterOS", "WiFi", "DNS", "DHCP", "Filtrage", "Utilisateurs", "Backup", "Portail captif"]
       },
       {
         "icon": "fa-cloud-upload-alt",
@@ -132,12 +124,20 @@
         "tags": ["Asterisk", "Elastix", "VoIP", "SIP", "Téléphonie IP"]
       },
       {
-        "icon": "fa-network-wired",
-        "color": "#22c55e",
-        "title": "Réseau d'Entreprise",
-        "tech": "Réseau · Infrastructure",
-        "desc": "Installation et configuration complète d'un réseau d'entreprise : Wi-Fi, DNS, DHCP, règles de filtrage, gestion des utilisateurs, sauvegardes et portail captif.",
-        "tags": ["WiFi", "DNS", "DHCP", "Filtrage", "Utilisateurs", "Backup", "Portail captif"]
+        "icon": "fa-microchip",
+        "color": "#7c3aed",
+        "title": "Manichicks",
+        "tech": "IoT · Big Data · Machine Learning",
+        "desc": "Projet de groupe : plateforme IoT avec collecte de données temps réel, traitement streaming via Kafka et Apache Spark, et analyse par machine learning.",
+        "tags": ["IoT", "Kafka", "Apache Spark", "Machine Learning", "Python"]
+      },
+      {
+        "icon": "fa-chart-line",
+        "color": "#f59e0b",
+        "title": "Trading Algorithmique",
+        "tech": "MQL5 · Automatisation",
+        "desc": "Développement d'un Expert Advisor (EA) de trading algorithmique en MQL5 pour MetaTrader : stratégies automatisées, gestion du risque et backtesting.",
+        "tags": ["MQL5", "MetaTrader", "Trading algorithmique", "Automatisation"]
       },
       {
         "icon": "fa-code",
@@ -240,7 +240,8 @@
       "messagePlaceholder": "Votre message...",
       "submit": "Envoyer"
     },
-    "alert": "Merci pour votre message ! Je vous répondrai dans les plus brefs délais."
+    "alert": "Merci pour votre message ! Je vous répondrai dans les plus brefs délais.",
+    "alertError": "Une erreur est survenue. Veuillez réessayer ou m'écrire directement à "
   },
   "certifications": {
     "label": "Badges",
@@ -250,30 +251,35 @@
       {
         "title": "Certificate of Completion",
         "issuer": "Anthropic Education",
+        "year": "2026",
         "desc": "Certificat de réussite délivré par Anthropic Education, attestant de la complétion d'une formation sur les technologies d'intelligence artificielle.",
         "file": "anthropic.pdf"
       },
       {
         "title": "Cloud",
-        "issuer": "Cloud",
+        "issuer": "DataCamp",
+        "year": "2026",
         "desc": "Certification en Cloud Computing couvrant les fondamentaux des services cloud, le déploiement et la gestion d'infrastructures.",
         "file": "cloud.pdf"
       },
       {
         "title": "Git",
-        "issuer": "Git",
+        "issuer": "DataCamp",
+        "year": "2026",
         "desc": "Certification en contrôle de version avec Git, couvrant le workflow, les branches, les merges et la collaboration.",
         "file": "git.pdf"
       },
       {
         "title": "Java",
-        "issuer": "Java",
+        "issuer": "DataCamp",
+        "year": "2026",
         "desc": "Certification en programmation Java, couvrant la POO, les structures de données et le développement d'applications.",
         "file": "java.pdf"
       },
       {
         "title": "Python",
-        "issuer": "Python",
+        "issuer": "DataCamp",
+        "year": "2026",
         "desc": "Certification en programmation Python, couvrant les fondamentaux, la manipulation de données et l'automatisation.",
         "file": "python.pdf"
       }
