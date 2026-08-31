@@ -276,6 +276,13 @@
         "year": "2026",
         "desc": "Python programming certification covering fundamentals, data manipulation, and automation.",
         "file": "python.pdf"
+      },
+      {
+        "title": "Cybersecurity I2CS",
+        "issuer": "Cisco",
+        "year": "2026",
+        "desc": "Cybersecurity certification issued by Cisco, covering network and systems security fundamentals.",
+        "file": "cisco-i2cs.pdf"
       }
     ]
   },
