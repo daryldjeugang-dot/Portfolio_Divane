@@ -27,16 +27,13 @@ export default function Certifications() {
 
 function CertCard({ cert }) {
   const [ref, visible] = useInView()
+  const thumb = `/assets/documents/badges/thumbs/${cert.file.replace('.pdf', '.png')}`
 
   return (
     <div className={`cert-card ${visible ? 'visible' : ''}`} ref={ref}>
-      <div className="cert-preview">
-        <iframe
-          src={`/assets/documents/badges/${cert.file}#toolbar=0&navpanes=0`}
-          title={cert.title}
-          className="cert-pdf-preview"
-        />
-      </div>
+      <a href={`/assets/documents/badges/${cert.file}`} target="_blank" rel="noopener noreferrer" className="cert-preview-link">
+        <img src={thumb} alt={cert.title} className="cert-preview-img" loading="lazy" />
+      </a>
       <h4>{cert.title}</h4>
       <div className="cert-issuer">{cert.issuer}{cert.year ? ` · ${cert.year}` : ''}</div>
       <p>{cert.desc}</p>
