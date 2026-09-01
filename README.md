@@ -112,8 +112,8 @@ export const personalInfo = {
 
 ## 🌍 Déploiement
 
-Site déployé sur GitHub Pages :
-**[https://daryldjeugang-dot.github.io/Portfolio_Divane/](https://daryldjeugang-dot.github.io/Portfolio_Divane/)**
+Site déployé sur Vercel :
+**[https://divane-nine.vercel.app](https://divane-nine.vercel.app)**
 
 ---
 
