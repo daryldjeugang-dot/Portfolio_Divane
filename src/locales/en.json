@@ -283,6 +283,13 @@
         "year": "2026",
         "desc": "Cybersecurity certification issued by Cisco, covering network and systems security fundamentals.",
         "file": "cisco-i2cs.pdf"
+      },
+      {
+        "title": "AI Fundamentals",
+        "issuer": "Cisco",
+        "year": "2026",
+        "desc": "AI Fundamentals certification issued by Cisco, covering key AI concepts and applications.",
+        "file": "ai-fundamentals.pdf"
       }
     ]
   },
