@@ -286,9 +286,9 @@
       },
       {
         "title": "AI Fundamentals",
-        "issuer": "Cisco",
+        "issuer": "DataCamp",
         "year": "2026",
-        "desc": "AI Fundamentals certification issued by Cisco, covering key AI concepts and applications.",
+        "desc": "AI Fundamentals certification issued by DataCamp, covering key AI concepts and applications.",
         "file": "ai-fundamentals.pdf"
       }
     ]

@@ -30,8 +30,12 @@ function CertCard({ cert }) {
 
   return (
     <div className={`cert-card ${visible ? 'visible' : ''}`} ref={ref}>
-      <div className="cert-icon">
-        <i className="fas fa-certificate" />
+      <div className="cert-preview">
+        <iframe
+          src={`/assets/documents/badges/${cert.file}#toolbar=0&navpanes=0`}
+          title={cert.title}
+          className="cert-pdf-preview"
+        />
       </div>
       <h4>{cert.title}</h4>
       <div className="cert-issuer">{cert.issuer}{cert.year ? ` · ${cert.year}` : ''}</div>
