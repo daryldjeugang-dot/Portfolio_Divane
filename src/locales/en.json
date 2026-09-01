@@ -247,49 +247,49 @@
         "issuer": "Anthropic Education",
         "year": "2026",
         "desc": "Certificate of completion issued by Anthropic Education, attesting to the completion of a course on artificial intelligence technologies.",
-        "file": "anthropic.pdf"
+        "file": "Djeugang-Daryl-Certificate-of-Completion-2026.pdf"
       },
       {
         "title": "Cloud",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Cloud Computing certification covering cloud fundamentals, deployment, and infrastructure management.",
-        "file": "cloud.pdf"
+        "file": "Djeugang-Daryl-Cloud-2026.pdf"
       },
       {
         "title": "Git",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Version control certification with Git, covering workflow, branching, merging, and collaboration.",
-        "file": "git.pdf"
+        "file": "Djeugang-Daryl-Git-2026.pdf"
       },
       {
         "title": "Java",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Java programming certification covering OOP, data structures, and application development.",
-        "file": "java.pdf"
+        "file": "Djeugang-Daryl-Java-2026.pdf"
       },
       {
         "title": "Python",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Python programming certification covering fundamentals, data manipulation, and automation.",
-        "file": "python.pdf"
+        "file": "Djeugang-Daryl-Python-2026.pdf"
       },
       {
         "title": "Cybersecurity I2CS",
         "issuer": "Cisco",
         "year": "2026",
         "desc": "Cybersecurity certification issued by Cisco, covering network and systems security fundamentals.",
-        "file": "cisco-i2cs.pdf"
+        "file": "Djeugang-Daryl-Cybersecurite-I2CS-2026.pdf"
       },
       {
         "title": "AI Fundamentals",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "AI Fundamentals certification issued by DataCamp, covering key AI concepts and applications.",
-        "file": "ai-fundamentals.pdf"
+        "file": "Djeugang-Daryl-AI-Fundamentals-2026.pdf"
       }
     ]
   },

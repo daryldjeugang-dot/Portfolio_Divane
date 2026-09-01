@@ -247,49 +247,49 @@
         "issuer": "Anthropic Education",
         "year": "2026",
         "desc": "Certificat de réussite délivré par Anthropic Education, attestant de la complétion d'une formation sur les technologies d'intelligence artificielle.",
-        "file": "anthropic.pdf"
+        "file": "Djeugang-Daryl-Certificate-of-Completion-2026.pdf"
       },
       {
         "title": "Cloud",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Certification en Cloud Computing couvrant les fondamentaux des services cloud, le déploiement et la gestion d'infrastructures.",
-        "file": "cloud.pdf"
+        "file": "Djeugang-Daryl-Cloud-2026.pdf"
       },
       {
         "title": "Git",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Certification en contrôle de version avec Git, couvrant le workflow, les branches, les merges et la collaboration.",
-        "file": "git.pdf"
+        "file": "Djeugang-Daryl-Git-2026.pdf"
       },
       {
         "title": "Java",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Certification en programmation Java, couvrant la POO, les structures de données et le développement d'applications.",
-        "file": "java.pdf"
+        "file": "Djeugang-Daryl-Java-2026.pdf"
       },
       {
         "title": "Python",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Certification en programmation Python, couvrant les fondamentaux, la manipulation de données et l'automatisation.",
-        "file": "python.pdf"
+        "file": "Djeugang-Daryl-Python-2026.pdf"
       },
       {
         "title": "Cybersécurité I2CS",
         "issuer": "Cisco",
         "year": "2026",
         "desc": "Certification en cybersécurité délivrée par Cisco, couvrant les fondamentaux de la sécurité des réseaux et des systèmes.",
-        "file": "cisco-i2cs.pdf"
+        "file": "Djeugang-Daryl-Cybersecurite-I2CS-2026.pdf"
       },
       {
         "title": "AI Fundamentals",
         "issuer": "DataCamp",
         "year": "2026",
         "desc": "Certification en fondamentaux de l'intelligence artificielle délivrée par DataCamp, couvrant les concepts clés de l'IA et ses applications.",
-        "file": "ai-fundamentals.pdf"
+        "file": "Djeugang-Daryl-AI-Fundamentals-2026.pdf"
       }
     ]
   },
