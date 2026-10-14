@@ -8,7 +8,7 @@ export default function Experience() {
   const experiences = t('experience.list', { returnObjects: true })
 
   return (
-    <section id="experience" style={{ background: 'var(--bg-secondary)' }}>
+    <section id="experience">
       <div className="container">
         <div className={`section-header ${visible ? 'visible' : ''}`} ref={ref}>
           <div className="label">{t('experience.label')}</div>
@@ -16,7 +16,7 @@ export default function Experience() {
         </div>
         <div className="timeline">
           {experiences.map((exp, i) => (
-            <TimelineItem key={i} exp={exp} />
+            <TimelineItem key={i} exp={exp} index={i} />
           ))}
         </div>
       </div>
@@ -24,18 +24,26 @@ export default function Experience() {
   )
 }
 
-function TimelineItem({ exp }) {
+function TimelineItem({ exp, index }) {
   const [ref, visible] = useInView()
 
   return (
-    <div className={`timeline-item ${visible ? 'visible' : ''}`} ref={ref}>
-      <div className="timeline-dot" />
-      <div className="date">{exp.date || exp.period}</div>
-      <h4>{exp.title}</h4>
-      <div className="org">{exp.org || exp.tag}</div>
-      <ul>
-        {exp.items.map((item, i) => <li key={i}>{item}</li>)}
-      </ul>
+    <div
+      className={`timeline-item ${visible ? 'visible' : ''}`}
+      ref={ref}
+      style={{ transitionDelay: `${index * 0.12}s` }}
+    >
+      <div className="timeline-dot">
+        <i className="fas fa-briefcase" aria-hidden="true" />
+      </div>
+      <article className="timeline-card">
+        <div className="date">{exp.date || exp.period}</div>
+        <h4>{exp.title}</h4>
+        <div className="org">{exp.org || exp.tag}</div>
+        <ul>
+          {exp.items.map((item, i) => <li key={i}>{item}</li>)}
+        </ul>
+      </article>
     </div>
   )
 }

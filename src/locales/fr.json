@@ -1,22 +1,69 @@
 {
   "nav": {
     "home": "Accueil",
+    "skip": "Aller au contenu principal",
     "about": "À propos",
-    "skills": "Compétences",
+    "services": "Services",
     "projects": "Projets",
     "experience": "Expérience",
     "education": "Formation",
-    "certifications": "Badges",
-    "contact": "Contact"
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "cta": "PARLONS PROJET",
+    "live": "ONLINE",
+    "floating": "CONTACT"
   },
   "hero": {
+    "eyebrow": "SALUT, JE SUIS",
     "badge": "Ouvert aux opportunités",
     "name": "DIVANE DARYL\nNDJAGA DJEUGANG",
     "subtitle": "Ingénieur de travaux en Cybersécurité, Réseaux & Administration Systèmes",
     "meta": "Futur ingénieur en cybersécurité | Passionné de réseaux et de systèmes",
     "tags": ["Cybersécurité", "Réseaux", "Linux", "Windows Server", "Python", "Cloud"],
     "btnProjects": "Voir mes projets",
-    "btnCv": "Télécharger mon CV"
+    "btnCv": "Télécharger mon CV",
+    "proofLabel": "Points forts du profil",
+    "proof": [
+      { "value": "8+", "label": "projets techniques" },
+      { "value": "2", "label": "stages terrain" },
+      { "value": "10+", "label": "technologies" }
+    ],
+    "status": {
+      "label": "Résumé opérationnel",
+      "kicker": "profil disponible",
+      "heading": "Infrastructure, sécurité et systèmes prêts pour le terrain.",
+      "body": "Un profil orienté pratique, capable de relier configuration réseau, administration système et développement sécurisé.",
+      "items": [
+        { "icon": "fa-shield-halved", "text": "Sécurisation réseau et pare-feu" },
+        { "icon": "fa-server", "text": "Linux, Windows Server, Active Directory" },
+        { "icon": "fa-code-branch", "text": "Automatisation, web et projets blockchain" }
+      ]
+    },
+    "quote_heading": "Un bon design se fait remarquer. Un grand design reste gravé.",
+    "quote_body": "Je transforme les besoins en solutions digitales fiables, sécurisées et performantes, de la infrastructure aux applications web et systèmes d'entreprise."
+  },
+  "terminal": {
+    "label": "Terminal interactif du portfolio",
+    "title": "daryl.secure-terminal",
+    "status": "access granted",
+    "inputLabel": "Commande terminal",
+    "placeholder": "tape help",
+    "run": "Exécuter la commande",
+    "commandsLabel": "Commandes disponibles",
+    "lines": {
+      "boot": "initialisation du profil cyber... OK",
+      "hint": "tape help pour explorer le portfolio.",
+      "cleared": "terminal nettoyé."
+    },
+    "responses": {
+      "help": "Commandes: about, skills, projects, contact, secret, clear.",
+      "about": "Divane Daryl: cybersécurité, réseaux, administration systèmes et développement sécurisé.",
+      "skills": "Stack: Linux, Windows Server, Active Directory, MikroTik, pfSense, Python, React, Solidity.",
+      "projects": "Projets clés: DiploChain, pfSense, réseau MikroTik, VoIP, Active Directory, IoT.",
+      "contact": "Contact rapide: WhatsApp ou email via la section contact.",
+      "secret": "Commande secrète trouvée: mindset = apprendre, sécuriser, livrer.",
+      "unknown": "Commande inconnue. Tape help pour voir les options."
+    }
   },
   "about": {
     "label": "À propos",
@@ -38,44 +85,50 @@
       { "num": "10+", "label": "Technologies maîtrisées" }
     ]
   },
-  "skills": {
-    "label": "Compétences",
-    "heading": "Mes domaines d'expertise",
-    "subtitle": "Cybersécurité, Réseaux, Systèmes, Développement & Données",
-    "categories": [
+  "services": {
+    "label": "SERVICES & COMPÉTENCES",
+    "heading": "Services & Expertise",
+    "subtitle": "Des solutions axées sur la technologie, la sécurité et la performance.",
+    "cards": [
       {
         "icon": "fa-shield-halved",
         "title": "Cybersécurité",
-        "items": ["Sécurisation des réseaux", "Filtrage réseau", "ACL", "Pare-feu", "VPN", "NAT", "Analyse du trafic réseau", "Surveillance réseau", "Durcissement des systèmes", "Contrôle des accès", "Protection des données", "Wireshark", "Nmap", "pfSense", "Analyse de vulnérabilités"]
+        "color": "#ef4444",
+        "desc": "Sécurisation des systèmes, protection des données et mise en place de pratiques de sécurité robustes."
       },
       {
         "icon": "fa-network-wired",
         "title": "Réseaux",
-        "items": ["TCP/IP", "IPv4", "VLAN", "Routage", "DNS", "DHCP", "NAT", "VPN", "Pare-feu", "Haute disponibilité", "Câblage réseau", "Administration réseau", "Dépannage réseau", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3", "MikroTik", "RouterOS", "Winbox", "VoIP", "Téléphonie IP", "Wi-Fi", "Portail captif", "Sauvegarde"]
+        "color": "#3b82f6",
+        "desc": "Conception, déploiement et administration d'infrastructures réseau performantes et sécurisées."
       },
       {
         "icon": "fa-server",
         "title": "Administration Systèmes",
-        "items": ["Linux (Ubuntu)", "Kali Linux", "Administration Linux", "Gestion des utilisateurs", "Gestion des permissions", "Gestion des services", "Configuration réseau", "Automatisation", "Gestion des processus", "Windows Server", "Active Directory", "GPO / Politiques de sécurité", "Administration centralisée", "Docker", "VirtualBox"]
+        "color": "#22c55e",
+        "desc": "Administration Linux/Windows, Active Directory, Docker et automatisation des processus."
       },
       {
         "icon": "fa-code",
         "title": "Développement",
-        "items": ["Python", "Scripts d'automatisation", "Manipulation de données", "Programmation orientée objet", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Django", "Git", "GitHub", "API REST", "SQL"]
+        "color": "#7c3aed",
+        "desc": "Création de sites web et applications modernes avec HTML, CSS, JavaScript, Python et Django."
       },
       {
         "icon": "fa-database",
         "title": "Données & Blockchain",
-        "items": ["PostgreSQL", "SQL", "Création de bases de données", "Modélisation de données", "Pandas", "Matplotlib", "Analyse exploratoire", "Visualisation de données", "Kafka", "Apache Spark", "Machine Learning", "IoT", "Solidité", "Blockchain", "Ethereum", "Sepolia", "MetaMask", "Hardhat", "IPFS"]
+        "color": "#f59e0b",
+        "desc": "Gestion de bases de données, analyse de données, IoT et technologies blockchain."
       }
     ]
   },
   "projects": {
-    "label": "Projets",
-    "heading": "Réalisations",
+    "label": "PROJETS SÉLECTIONNÉS",
+    "heading": "Projets Phares",
     "subtitle": "Des projets concrets alliant cybersécurité, réseaux et développement",
     "more": "Voir plus de projets",
     "less": "Voir moins",
+    "view_project": "Voir l'étude de cas",
     "list": [
       {
         "icon": "fa-link",
@@ -95,7 +148,7 @@
       },
       {
         "icon": "fa-network-wired",
-        "color": "#00d4ff",
+        "color": "#22d3ee",
         "title": "Infrastructure Réseau d'Entreprise",
         "tech": "MikroTik · Linux · Infrastructure",
         "desc": "Installation et configuration complète d'un réseau d'entreprise sur MikroTik RouterOS : Wi-Fi, serveur DNS et DHCP, règles de filtrage, gestion des utilisateurs, sauvegardes et portail captif.",
@@ -111,7 +164,7 @@
       },
       {
         "icon": "fa-shield",
-        "color": "#00d4ff",
+        "color": "#ef4444",
         "title": "Sécurité Réseau pfSense",
         "tech": "Réseau · Cybersécurité",
         "desc": "Installation et configuration d'un pare-feu pfSense : filtrage du trafic, règles de sécurité, NAT, surveillance réseau et VPN pour un accès distant sécurisé et chiffré.",
@@ -135,7 +188,7 @@
       },
       {
         "icon": "fa-code",
-        "color": "#00d4ff",
+        "color": "#22d3ee",
         "title": "Développement Web",
         "tech": "Web · Frontend",
         "desc": "Création et intégration de pages web responsives avec HTML, CSS, JavaScript et Tailwind CSS.",
@@ -144,8 +197,8 @@
     ]
   },
   "experience": {
-    "label": "Expérience",
-    "heading": "Parcours professionnel",
+    "label": "TRAJECTOIRE PROFESSIONNELLE",
+    "heading": "Expériences & Impact",
     "list": [
       {
         "date": "2024",
@@ -173,8 +226,8 @@
     ]
   },
   "education": {
-    "label": "Formation",
-    "heading": "Mon parcours académique",
+    "label": "PARCOURS ACADÉMIQUE",
+    "heading": "Éducation & Diplômes",
     "list": [
       {
         "year": "2025 – 2026",
@@ -210,11 +263,12 @@
     "list": ["Cybersécurité", "Réseaux informatiques", "Linux", "Cloud Computing", "IA / Machine Learning", "Blockchain", "Développement logiciel", "Veille technologique"]
   },
   "contact": {
-    "label": "Contact",
+    "label": "PRENDRE CONTACT",
     "heading": "Restons en contact",
     "subtitle": "Discutons de vos projets et opportunités",
     "infoHeading": "Mes coordonnées",
     "infoText": "Disponible pour discuter de collaborations, stages ou opportunités dans le domaine de la cybersécurité et des réseaux.",
+    "whatsappNote": "Le message sera envoyé directement via WhatsApp",
     "infoFields": {
       "email": "Email",
       "phone": "Téléphone",
@@ -223,24 +277,21 @@
       "whatsapp": "WhatsApp"
     },
     "form": {
-      "heading": "Envoyez-moi un message",
+      "heading": "Votre message",
       "name": "Nom complet",
       "namePlaceholder": "Votre nom",
-      "email": "Email",
-      "emailPlaceholder": "votre@email.com",
-      "subject": "Sujet",
-      "subjectPlaceholder": "Sujet du message",
       "message": "Message",
-      "messagePlaceholder": "Votre message...",
-      "submit": "Envoyer"
+      "messagePlaceholder": "Écrivez votre message ici...",
+      "submit": "Envoyer sur WhatsApp"
     },
     "alert": "Merci pour votre message ! Je vous répondrai dans les plus brefs délais.",
     "alertError": "Une erreur est survenue. Veuillez réessayer ou m'écrire directement à "
   },
   "certifications": {
-    "label": "Badges",
-    "heading": "Mes badges",
-    "subtitle": "Compétences validées par des badges",
+    "label": "CERTIFICATIONS VÉRIFIÉES",
+    "heading": "Certifications Professionnelles",
+    "subtitle": "Compétences validées par des certifications reconnues",
+    "verify": "Vérifier",
     "list": [
       {
         "title": "Certificate of Completion",
@@ -293,8 +344,45 @@
       }
     ]
   },
+  "process": {
+    "label": "MÉTHODOLOGIE & WORKFLOW",
+    "heading": "Comment je travaille",
+    "steps": [
+      {
+        "icon": "fa-magnifying-glass",
+        "title": "Analyse",
+        "desc": "Étude des besoins, audit de l'existant et définition des objectifs techniques."
+      },
+      {
+        "icon": "fa-pen-ruler",
+        "title": "Conception",
+        "desc": "Architecture technique, modélisation et planification de la solution."
+      },
+      {
+        "icon": "fa-code",
+        "title": "Développement",
+        "desc": "Implémentation avec les meilleures pratiques, tests et intégration continue."
+      },
+      {
+        "icon": "fa-rocket",
+        "title": "Déploiement",
+        "desc": "Mise en production, monitoring et maintenance pour garantir la performance."
+      }
+    ]
+  },
   "footer": {
-    "text": "Construit avec"
+    "text": "Construit avec",
+    "huge_1": "CRÉONS",
+    "huge_2": "QUELQUE CHOSE",
+    "huge_3": "D'INOUBLIABLE.",
+    "cta_title": "UN PROJET EN TÊTE ?",
+    "cta_button": "ME CONTACTER",
+    "nav_about": "À PROPOS",
+    "nav_education": "FORMATION",
+    "nav_experience": "EXPÉRIENCE",
+    "nav_projects": "PROJETS",
+    "nav_certifications": "CERTIFICATIONS",
+    "signature": "© 2026 — Divane Daryl"
   },
   "personalInfo": {
     "title": "Ingénieur de travaux en Cybersécurité, Réseaux & Administration Systèmes",

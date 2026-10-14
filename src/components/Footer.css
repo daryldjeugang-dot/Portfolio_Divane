@@ -1,28 +1,195 @@
-footer {
-  border-top: 1px solid var(--border);
-  padding: 32px 0;
+.footer-cinematic-wrapper {
+  position: relative;
+  border-top: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.footer-grain-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+.footer-watermark-marquee {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
+  -webkit-mask-image: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
+}
+
+.footer-watermark-track {
+  display: flex;
+  white-space: nowrap;
+  font-size: clamp(5.5rem, 10vw, 12rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.04;
+  animation: watermarkScroll 40s linear infinite;
+}
+
+@keyframes watermarkScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.footer-content-container {
+  position: relative;
+  z-index: 1;
+  min-height: 90vh;
+  padding: 120px 48px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.footer-typography-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.ft-line {
+  line-height: 1;
+}
+
+.ft-text {
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.ft-text--solid {
+  color: var(--text-primary);
+  opacity: 0.15;
+}
+
+.ft-text--outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #ffffff59;
+  position: relative;
+}
+
+.ft-text--orange {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-strong) 34%, var(--accent-warm) 66%, var(--accent) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: orangeShimmer 4s linear infinite;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+}
+
+.footer-cta-box {
   text-align: center;
 }
 
-footer p {
-  color: var(--text-muted);
-  font-size: 0.85rem;
+.footer-cta-box h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
-.footer-links {
+.footer-bottom-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 40px;
+}
+
+.footer-creative-nav {
+  width: 100%;
+}
+
+.footer-nav-list {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 16px;
+  gap: 32px;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
-.footer-links a {
+.footer-nav-list a {
+  color: #fff9;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.footer-nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.footer-nav-list a:hover {
+  color: var(--text-primary);
+}
+
+.footer-nav-list a:hover::after {
+  width: 100%;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-socials a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ffffff33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-secondary);
   font-size: 1.1rem;
-  transition: var(--transition);
+  transition: var(--transition-fast);
 }
 
-.footer-links a:hover {
+.footer-socials a:hover {
   color: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+.footer-signature {
+  color: var(--text-body);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .footer-content-container { padding: 80px 24px 60px; min-height: auto; }
+  .ft-text { font-size: clamp(2rem, 8vw, 4rem); }
+  .ft-text--orange { font-size: clamp(1.8rem, 7vw, 3.5rem); }
 }

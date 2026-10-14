@@ -5,15 +5,18 @@
 }
 
 .edu-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
   padding: 28px;
   transition: var(--transition);
 }
 
 .edu-card:hover {
-  background: var(--bg-card-hover);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
   transform: translateY(-2px);
 }
 
@@ -24,7 +27,12 @@
   margin-bottom: 8px;
 }
 
-.edu-card h4 { font-size: 1.1rem; }
+.edu-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
 
 .edu-card .school {
   color: var(--text-secondary);

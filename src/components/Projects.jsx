@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import { useInView } from '../hooks/useInView'
 import { useTranslation } from '../context/LanguageContext'
 import './Projects.css'
 
 const techIcons = [
-  { icon: 'fa-code', top: '8%', left: '5%', color: '#00d4ff', delay: '0s' },
+  { icon: 'fa-code', top: '8%', left: '5%', color: '#22d3ee', delay: '0s' },
   { icon: 'fa-shield-halved', top: '15%', right: '8%', color: '#22c55e', delay: '0.8s' },
   { icon: 'fa-cube', top: '55%', left: '3%', color: '#7c3aed', delay: '1.6s' },
   { icon: 'fa-database', top: '40%', right: '4%', color: '#f59e0b', delay: '1.2s' },
@@ -90,27 +90,77 @@ const techIconMap = {
   'Automatisation': 'fa-robot', 'Automation': 'fa-robot',
 }
 
+function TiltCard({ children, className = '' }) {
+  const ref = useRef(null)
+  const animRef = useRef(null)
+  const state = useRef({ rx: 0, ry: 0, tx: 0, ty: 0, scale: 1 })
+
+  const animate = useCallback(() => {
+    const s = state.current
+    const el = ref.current
+    if (!el) return
+    el.style.transform = `perspective(800px) rotateX(${s.rx.toFixed(2)}deg) rotateY(${s.ry.toFixed(2)}deg) translate3d(${s.tx.toFixed(2)}px, ${s.ty.toFixed(2)}px, 0) scale(${s.scale.toFixed(4)})`
+    el.style.setProperty('--mouse-x', `${((s.ry / 8 + 1) / 2 * 100).toFixed(1)}%`)
+    el.style.setProperty('--mouse-y', `${((-s.rx / 6 + 1) / 2 * 100).toFixed(1)}%`)
+  }, [])
+
+  const onMove = useCallback((e) => {
+    const el = ref.current
+    if (!el) return
+    const r = el.getBoundingClientRect()
+    const x = (e.clientX - r.left) / r.width * 2 - 1
+    const y = (e.clientY - r.top) / r.height * 2 - 1
+    state.current.ry = Math.max(-8, Math.min(8, x * 8))
+    state.current.rx = Math.max(-6, Math.min(6, -y * 6))
+    state.current.tx = Math.max(-4, Math.min(4, x * 4))
+    state.current.ty = Math.max(-4, Math.min(4, y * 4))
+    state.current.scale = 1.02
+    if (!animRef.current) animRef.current = requestAnimationFrame(() => { animRef.current = null; animate() })
+  }, [animate])
+
+  const onLeave = useCallback(() => {
+    state.current = { rx: 0, ry: 0, tx: 0, ty: 0, scale: 1 }
+    if (!animRef.current) animRef.current = requestAnimationFrame(() => { animRef.current = null; animate() })
+  }, [animate])
+
+  return (
+    <div
+      ref={ref}
+      className={`${className} threed-tilt-element`}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      onTouchMove={(e) => { if (e.touches[0]) onMove({ clientX: e.touches[0].clientX, clientY: e.touches[0].clientY }) }}
+      onTouchEnd={onLeave}
+    >
+      <div className="threed-tilt-spotlight" />
+      {children}
+    </div>
+  )
+}
+
 function ProjectCard({ project }) {
   const [ref, visible] = useInView()
 
   return (
-    <div className={`project-card ${visible ? 'visible' : ''}`} ref={ref}>
-      <div className="icon" style={{ background: `${project.color}20`, color: project.color }}>
-        <i className={`fas ${project.icon}`} />
+    <TiltCard className={`project-card ${visible ? 'visible' : ''}`}>
+      <div ref={ref} style={{ position: 'relative', zIndex: 2 }}>
+        <div className="icon" style={{ background: `${project.color}20`, color: project.color }}>
+          <i className={`fas ${project.icon}`} />
+        </div>
+        <h4>{project.title}</h4>
+        <div className="tech">{project.tech}</div>
+        <p>{project.desc}</p>
+        <div className="project-tech-icons">
+          {project.tags.map((t, i) => {
+            const icon = techIconMap[t] || 'fa-microchip'
+            return <span key={i} className="tech-icon-bubble" title={t}><i className={`fas ${icon}`} /></span>
+          })}
+        </div>
+        <div className="tags">
+          {project.tags.map((t, i) => <span key={i}>{t}</span>)}
+        </div>
       </div>
-      <h4>{project.title}</h4>
-      <div className="tech">{project.tech}</div>
-      <p>{project.desc}</p>
-      <div className="project-tech-icons">
-        {project.tags.map((t, i) => {
-          const icon = techIconMap[t] || 'fa-microchip'
-          return <span key={i} className="tech-icon-bubble" title={t}><i className={`fas ${icon}`} /></span>
-        })}
-      </div>
-      <div className="tags">
-        {project.tags.map((t, i) => <span key={i}>{t}</span>)}
-      </div>
-    </div>
+    </TiltCard>
   )
 }
 
@@ -118,20 +168,22 @@ function CompactProject({ project }) {
   const [ref, visible] = useInView()
 
   return (
-    <div className={`compact-project ${visible ? 'visible' : ''}`} ref={ref}>
-      <div className="compact-icon" style={{ background: `${project.color}20`, color: project.color }}>
-        <i className={`fas ${project.icon}`} />
-      </div>
-      <div className="compact-body">
-        <div className="compact-head">
-          <h4>{project.title}</h4>
-          <div className="tech">{project.tech}</div>
+    <TiltCard className={`compact-project ${visible ? 'visible' : ''}`}>
+      <div ref={ref} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', position: 'relative', zIndex: 2 }}>
+        <div className="compact-icon" style={{ background: `${project.color}20`, color: project.color }}>
+          <i className={`fas ${project.icon}`} />
         </div>
-        <p>{project.desc}</p>
-        <div className="tags">
-          {project.tags.map((t, i) => <span key={i}>{t}</span>)}
+        <div className="compact-body">
+          <div className="compact-head">
+            <h4>{project.title}</h4>
+            <div className="tech">{project.tech}</div>
+          </div>
+          <p>{project.desc}</p>
+          <div className="tags">
+            {project.tags.map((t, i) => <span key={i}>{t}</span>)}
+          </div>
         </div>
       </div>
-    </div>
+    </TiltCard>
   )
 }

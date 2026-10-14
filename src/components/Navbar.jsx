@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useTheme } from '../context/ThemeContext'
 import { useTranslation } from '../context/LanguageContext'
 import './Navbar.css'
 
@@ -7,7 +6,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [active, setActive] = useState('home')
-  const { theme, toggleTheme } = useTheme()
+  const [isMobile, setIsMobile] = useState(false)
   const { t, lang, setLang } = useTranslation()
 
   useEffect(() => {
@@ -17,7 +16,26 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const ids = ['home', 'about', 'skills', 'projects', 'experience', 'education', 'certifications', 'contact']
+    const media = window.matchMedia('(max-width: 900px)')
+    const onChange = () => {
+      setIsMobile(media.matches)
+      if (!media.matches) setOpen(false)
+    }
+    onChange()
+    media.addEventListener('change', onChange)
+    return () => media.removeEventListener('change', onChange)
+  }, [])
+
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [])
+
+  useEffect(() => {
+    const ids = ['home', 'about', 'services', 'projects', 'experience', 'education', 'certifications', 'contact']
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) setActive(entry.target.id)
@@ -39,7 +57,7 @@ export default function Navbar() {
   const links = [
     { label: t('nav.home'), id: 'home' },
     { label: t('nav.about'), id: 'about' },
-    { label: t('nav.skills'), id: 'skills' },
+    { label: t('nav.services'), id: 'services' },
     { label: t('nav.projects'), id: 'projects' },
     { label: t('nav.experience'), id: 'experience' },
     { label: t('nav.education'), id: 'education' },
@@ -50,26 +68,39 @@ export default function Navbar() {
   const toggleLang = () => setLang(lang === 'fr' ? 'en' : 'fr')
 
   return (
-    <nav className={scrolled ? 'scrolled' : ''}>
+    <nav className={`site-nav ${scrolled ? 'scrolled' : ''}`} aria-label="Navigation principale">
       <div className="container">
-        <button className="nav-logo" onClick={() => scrollTo('home')}>
+        <button className="nav-logo" type="button" onClick={() => scrollTo('home')}>
           &lt;<span>daryl</span>/&gt;
         </button>
-        <ul className={`nav-links ${open ? 'active' : ''}`}>
-          {links.map(l => (
-            <li key={l.id}>
-              <a href={`#${l.id}`} className={active === l.id ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="live-signal">
+          <span className="signal-dot" />
+          <span className="signal-text">{t('nav.live')}</span>
+        </div>
+        {(!isMobile || open) && (
+          <ul id="main-navigation" className={`nav-links ${open ? 'active' : ''}`}>
+            {links.map(l => (
+              <li key={l.id}>
+                <a href={`#${l.id}`} className={active === l.id ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="nav-actions">
-          <button className="lang-toggle-btn" onClick={toggleLang} aria-label="Toggle language">
+          <a href="#contact" className="nav-cta" onClick={(e) => { e.preventDefault(); scrollTo('contact') }}>
+            {t('nav.cta')} <i className="fas fa-arrow-right" />
+          </a>
+          <button className="lang-toggle-btn" type="button" onClick={toggleLang} aria-label="Toggle language">
             {lang === 'fr' ? 'EN' : 'FR'}
           </button>
-          <button className="theme-toggle-btn" onClick={toggleTheme} aria-label={lang === 'fr' ? 'Basculer le thème' : 'Toggle theme'}>
-            <i className={`fas fa-${theme === 'dark' ? 'sun' : 'moon'}`} />
-          </button>
-          <button className="nav-toggle" onClick={() => setOpen(o => !o)} aria-label="Menu">
+          <button
+            className="nav-toggle"
+            type="button"
+            onClick={() => setOpen(o => !o)}
+            aria-label="Menu"
+            aria-expanded={open}
+            aria-controls="main-navigation"
+          >
             <i className={`fas fa-${open ? 'times' : 'bars'}`} />
           </button>
         </div>

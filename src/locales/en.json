@@ -1,22 +1,69 @@
 {
   "nav": {
     "home": "Home",
+    "skip": "Skip to main content",
     "about": "About",
-    "skills": "Skills",
+    "services": "Services",
     "projects": "Projects",
     "experience": "Experience",
     "education": "Education",
-    "certifications": "Badges",
-    "contact": "Contact"
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "cta": "LET'S BUILD",
+    "live": "ONLINE",
+    "floating": "CONTACT"
   },
   "hero": {
+    "eyebrow": "HELLO, I AM",
     "badge": "Open to opportunities",
     "name": "DIVANE DARYL\nNDJAGA DJEUGANG",
     "subtitle": "Works Engineer in Cybersecurity, Networks & Systems Administration",
     "meta": "Future cybersecurity engineer | Passionate about networks and systems",
     "tags": ["Cybersecurity", "Networks", "Linux", "Windows Server", "Python", "Cloud"],
     "btnProjects": "View my projects",
-    "btnCv": "Download my CV"
+    "btnCv": "Download my CV",
+    "proofLabel": "Profile highlights",
+    "proof": [
+      { "value": "8+", "label": "technical projects" },
+      { "value": "2", "label": "field internships" },
+      { "value": "10+", "label": "technologies" }
+    ],
+    "status": {
+      "label": "Operational summary",
+      "kicker": "profile available",
+      "heading": "Infrastructure, security and systems ready for the field.",
+      "body": "A practical profile able to connect network configuration, system administration and secure development.",
+      "items": [
+        { "icon": "fa-shield-halved", "text": "Network security and firewalling" },
+        { "icon": "fa-server", "text": "Linux, Windows Server, Active Directory" },
+        { "icon": "fa-code-branch", "text": "Automation, web and blockchain projects" }
+      ]
+    },
+    "quote_heading": "Good design gets noticed. Great design gets remembered.",
+    "quote_body": "I transform business needs into reliable, secure, and high-performance digital solutions, from infrastructure to web applications and enterprise systems."
+  },
+  "terminal": {
+    "label": "Interactive portfolio terminal",
+    "title": "daryl.secure-terminal",
+    "status": "access granted",
+    "inputLabel": "Terminal command",
+    "placeholder": "type help",
+    "run": "Run command",
+    "commandsLabel": "Available commands",
+    "lines": {
+      "boot": "initializing cyber profile... OK",
+      "hint": "type help to explore the portfolio.",
+      "cleared": "terminal cleared."
+    },
+    "responses": {
+      "help": "Commands: about, skills, projects, contact, secret, clear.",
+      "about": "Divane Daryl: cybersecurity, networks, systems administration and secure development.",
+      "skills": "Stack: Linux, Windows Server, Active Directory, MikroTik, pfSense, Python, React, Solidity.",
+      "projects": "Key projects: DiploChain, pfSense, MikroTik network, VoIP, Active Directory, IoT.",
+      "contact": "Fast contact: WhatsApp or email through the contact section.",
+      "secret": "Secret command found: mindset = learn, secure, deliver.",
+      "unknown": "Unknown command. Type help to see options."
+    }
   },
   "about": {
     "label": "About",
@@ -38,44 +85,50 @@
       { "num": "10+", "label": "Technologies mastered" }
     ]
   },
-  "skills": {
-    "label": "Skills",
-    "heading": "My areas of expertise",
-    "subtitle": "Cybersecurity, Networks, Systems, Development & Data",
-    "categories": [
+  "services": {
+    "label": "SERVICES & CAPABILITIES",
+    "heading": "Services & Expertise",
+    "subtitle": "Solutions built around technology, security and performance.",
+    "cards": [
       {
         "icon": "fa-shield-halved",
         "title": "Cybersecurity",
-        "items": ["Network Security", "Network Filtering", "ACL", "Firewall", "VPN", "NAT", "Network Traffic Analysis", "Network Monitoring", "System Hardening", "Access Control", "Data Protection", "Wireshark", "Nmap", "pfSense", "Vulnerability Assessment"]
+        "color": "#ef4444",
+        "desc": "Securing systems, protecting data and implementing robust security practices."
       },
       {
         "icon": "fa-network-wired",
         "title": "Networks",
-        "items": ["TCP/IP", "IPv4", "VLAN", "Routing", "DNS", "DHCP", "NAT", "VPN", "Firewall", "High Availability", "Network Cabling", "Network Administration", "Network Troubleshooting", "HTTP/HTTPS", "SSH", "FTP", "Cisco Packet Tracer", "GNS3", "MikroTik", "RouterOS", "Winbox", "VoIP", "IP Telephony", "Wi-Fi", "Captive Portal", "Backup"]
+        "color": "#3b82f6",
+        "desc": "Design, deployment and administration of high-performance, secure network infrastructures."
       },
       {
         "icon": "fa-server",
         "title": "Systems Administration",
-        "items": ["Linux (Ubuntu)", "Kali Linux", "Linux Administration", "User Management", "Permission Management", "Service Management", "Network Configuration", "Automation", "Process Management", "Windows Server", "Active Directory", "GPO / Security Policies", "Centralized Administration", "Docker", "VirtualBox"]
+        "color": "#22c55e",
+        "desc": "Linux/Windows administration, Active Directory, Docker and process automation."
       },
       {
         "icon": "fa-code",
         "title": "Development",
-        "items": ["Python", "Automation Scripts", "Data Manipulation", "Object-Oriented Programming", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Django", "Git", "GitHub", "REST API", "SQL"]
+        "color": "#7c3aed",
+        "desc": "Creation of modern websites and applications with HTML, CSS, JavaScript, Python and Django."
       },
       {
         "icon": "fa-database",
         "title": "Data & Blockchain",
-        "items": ["PostgreSQL", "SQL", "Database Creation", "Data Modeling", "Pandas", "Matplotlib", "Exploratory Analysis", "Data Visualization", "Kafka", "Apache Spark", "Machine Learning", "IoT", "Solidity", "Blockchain", "Ethereum", "Sepolia", "MetaMask", "Hardhat", "IPFS"]
+        "color": "#f59e0b",
+        "desc": "Database management, data analysis, IoT and blockchain technologies."
       }
     ]
   },
   "projects": {
-    "label": "Projects",
-    "heading": "My work",
+    "label": "SELECTED WORKS",
+    "heading": "Featured Projects",
     "subtitle": "Concrete projects combining cybersecurity, networks and development",
     "more": "See more projects",
     "less": "See less",
+    "view_project": "View case study",
     "list": [
       {
         "icon": "fa-link",
@@ -95,7 +148,7 @@
       },
       {
         "icon": "fa-network-wired",
-        "color": "#00d4ff",
+        "color": "#22d3ee",
         "title": "Enterprise Network Infrastructure",
         "tech": "MikroTik · Linux · Infrastructure",
         "desc": "Complete installation and configuration of an enterprise network on MikroTik RouterOS: Wi-Fi, DNS and DHCP servers, filtering rules, user management, backups and captive portal.",
@@ -111,7 +164,7 @@
       },
       {
         "icon": "fa-shield",
-        "color": "#00d4ff",
+        "color": "#ef4444",
         "title": "pfSense Network Security",
         "tech": "Network · Cybersecurity",
         "desc": "Installation and configuration of a pfSense firewall: traffic filtering, security rules, NAT, network monitoring and a VPN for secure encrypted remote access.",
@@ -135,7 +188,7 @@
       },
       {
         "icon": "fa-code",
-        "color": "#00d4ff",
+        "color": "#22d3ee",
         "title": "Web Development",
         "tech": "Web · Frontend",
         "desc": "Creation and integration of responsive web pages using HTML, CSS, JavaScript and Tailwind CSS.",
@@ -144,8 +197,8 @@
     ]
   },
   "experience": {
-    "label": "Experience",
-    "heading": "Professional journey",
+    "label": "PROFESSIONAL TRAJECTORY",
+    "heading": "Work Experience & Impact",
     "list": [
       {
         "date": "2024",
@@ -173,8 +226,8 @@
     ]
   },
   "education": {
-    "label": "Education",
-    "heading": "Academic background",
+    "label": "ACADEMIC BACKGROUND",
+    "heading": "Education & Qualifications",
     "list": [
       {
         "year": "2025 – 2026",
@@ -210,11 +263,12 @@
     "list": ["Cybersecurity", "Computer Networks", "Linux", "Cloud Computing", "AI / Machine Learning", "Blockchain", "Software Development", "Tech Watch"]
   },
   "contact": {
-    "label": "Contact",
+    "label": "GET IN TOUCH",
     "heading": "Get in touch",
     "subtitle": "Let's talk about your projects and opportunities",
     "infoHeading": "My contact details",
     "infoText": "Available to discuss collaborations, internships or opportunities in cybersecurity and networks.",
+    "whatsappNote": "The message will be sent directly via WhatsApp",
     "infoFields": {
       "email": "Email",
       "phone": "Phone",
@@ -223,24 +277,21 @@
       "whatsapp": "WhatsApp"
     },
     "form": {
-      "heading": "Send me a message",
+      "heading": "Your message",
       "name": "Full name",
       "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your@email.com",
-      "subject": "Subject",
-      "subjectPlaceholder": "Message subject",
       "message": "Message",
-      "messagePlaceholder": "Your message...",
-      "submit": "Send"
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send on WhatsApp"
     },
     "alert": "Thank you for your message! I will get back to you as soon as possible.",
     "alertError": "Something went wrong. Please try again or reach me directly at "
   },
   "certifications": {
-    "label": "Badges",
-    "heading": "My badges",
-    "subtitle": "Skills validated by badges",
+    "label": "VERIFIED CREDENTIALS",
+    "heading": "Professional Certifications",
+    "subtitle": "Skills validated by recognized certifications",
+    "verify": "Verify",
     "list": [
       {
         "title": "Certificate of Completion",
@@ -293,8 +344,45 @@
       }
     ]
   },
+  "process": {
+    "label": "METHODOLOGY & WORKFLOW",
+    "heading": "How I Work",
+    "steps": [
+      {
+        "icon": "fa-magnifying-glass",
+        "title": "Analysis",
+        "desc": "Requirements study, existing audit and technical objectives definition."
+      },
+      {
+        "icon": "fa-pen-ruler",
+        "title": "Design",
+        "desc": "Technical architecture, modeling and solution planning."
+      },
+      {
+        "icon": "fa-code",
+        "title": "Development",
+        "desc": "Implementation with best practices, testing and continuous integration."
+      },
+      {
+        "icon": "fa-rocket",
+        "title": "Deployment",
+        "desc": "Production deployment, monitoring and maintenance to ensure performance."
+      }
+    ]
+  },
   "footer": {
-    "text": "Built with"
+    "text": "Built with",
+    "huge_1": "LET'S CREATE",
+    "huge_2": "SOMETHING",
+    "huge_3": "UNFORGETTABLE.",
+    "cta_title": "HAVE A PROJECT IN MIND?",
+    "cta_button": "CONTACT ME",
+    "nav_about": "ABOUT",
+    "nav_education": "EDUCATION",
+    "nav_experience": "EXPERIENCE",
+    "nav_projects": "PROJECTS",
+    "nav_certifications": "CERTIFICATIONS",
+    "signature": "© 2026 — Divane Daryl"
   },
   "personalInfo": {
     "title": "Works Engineer in Cybersecurity, Networks & Systems Administration",

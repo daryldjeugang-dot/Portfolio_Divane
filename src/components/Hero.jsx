@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from '../context/LanguageContext'
+import TerminalPanel from './TerminalPanel'
 import './Hero.css'
 
 function Typewriter({ text }) {
@@ -46,53 +47,71 @@ function Typewriter({ text }) {
 
 export default function Hero() {
   const { t } = useTranslation()
+  const tags = t('hero.tags', { returnObjects: true })
+  const proof = t('hero.proof', { returnObjects: true })
 
   return (
-    <section className="hero grid-bg" id="home">
-      <div className="hero-bg">
-        <div className="gradient-1" />
-        <div className="gradient-2" />
-      </div>
-      <div className="container">
+    <section className="hero" id="home">
+      <div className="hero-container">
         <div className="hero-content">
-          <div className="hero-text">
-            <div className="hero-badge">
-              <span className="dot" />
-              {t('hero.badge')}
-            </div>
-            <h1>
-              <Typewriter text={t('hero.name')} />
-            </h1>
-            <p className="hero-subtitle">
-              {t('hero.subtitle')}
+          <div className="hero-left">
+            <p className="hero-eyebrow">
+              <span>{t('hero.eyebrow')}</span>
+              <span className="eyebrow-line" />
             </p>
-            <p className="hero-meta">
-              {t('hero.meta')}
+            <h1 className="hero-name">
+              <span className="name-orange">
+                <Typewriter text={t('hero.name')} />
+              </span>
+            </h1>
+            <p className="hero-subtitle">{t('hero.subtitle')}</p>
+            <p className="hero-typewriter-line">
+              <span className="typewriter-dot" />
+              <Typewriter text={t('hero.meta')} />
             </p>
             <div className="hero-tags">
-              {t('hero.tags', { returnObjects: true }).map((tag, i) => (
-                <span key={i}>{tag}</span>
+              {tags.map((tag, i) => (
+                <span key={i} className="hero-tag">{tag}</span>
               ))}
             </div>
+            <p className="hero-bio">{t('hero.quote_body')}</p>
             <div className="hero-buttons">
-              <a href="#projects" className="btn btn-primary">
-                <i className="fas fa-arrow-right" /> {t('hero.btnProjects')}
+              <a href="#projects" className="btn btn-primary" onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}>
+                <i className="fas fa-folder-open" /> {t('hero.btnProjects')}
               </a>
-              <a href="/assets/documents/CV_Divane_Daryl.pdf" className="btn btn-outline" download>
+              <a href="/assets/documents/CV_Divane_Daryl.pdf" className="btn btn-primary" download>
                 <i className="fas fa-download" /> {t('hero.btnCv')}
               </a>
             </div>
+            <div className="hero-proof" aria-label={t('hero.proofLabel')}>
+              {proof.map((item, i) => (
+                <div key={i} className="hero-proof-item">
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                </div>
+              ))}
+            </div>
+            <div className="hero-social">
+              <a href="https://github.com/daryldjeugang-dot" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i className="fab fa-github" />
+              </a>
+              <a href="mailto:daryldjeugang@gmail.com" aria-label="Email">
+                <i className="fas fa-envelope" />
+              </a>
+              <a href="https://wa.me/237680292880" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i className="fab fa-whatsapp" />
+              </a>
+            </div>
           </div>
-          <div className="hero-image">
+
+          <div className="hero-center">
             <div className="hero-image-wrapper">
               <img src="/assets/images/photo_divane.png" alt="Divane Daryl Ndjaga Djeugang" />
-              <i className="fas fa-star float-icon" style={{ top: '-10%', left: '-10%', fontSize: '1.4rem', color: '#f59e0b', animationDelay: '0s' }} />
-              <i className="fas fa-laptop float-icon" style={{ top: '-12%', right: '-8%', fontSize: '1.3rem', color: 'var(--accent)', animationDelay: '0.6s' }} />
-              <i className="fas fa-shield-halved float-icon" style={{ bottom: '-8%', left: '-8%', fontSize: '1.2rem', color: '#22c55e', animationDelay: '1.2s' }} />
-              <i className="fas fa-code float-icon" style={{ bottom: '-6%', right: '-10%', fontSize: '1.3rem', color: 'var(--purple)', animationDelay: '0.3s' }} />
-              <i className="fas fa-network-wired float-icon" style={{ top: '40%', left: '-14%', fontSize: '1rem', color: 'var(--accent)', animationDelay: '0.9s' }} />
-              <i className="fas fa-server float-icon" style={{ top: '45%', right: '-12%', fontSize: '1.1rem', color: '#f59e0b', animationDelay: '1.5s' }} />
             </div>
+          </div>
+
+          <div className="hero-right">
+            <TerminalPanel />
           </div>
         </div>
       </div>

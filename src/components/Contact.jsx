@@ -12,11 +12,10 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = new FormData(e.target)
-    const subject = encodeURIComponent(data.get('subject') || `Message depuis le portfolio - ${personalInfo.name}`)
-    const body = encodeURIComponent(
-      `Nom : ${data.get('name')}\nEmail : ${data.get('email')}\n\n${data.get('message')}`
-    )
-    window.location.href = `mailto:${personalInfo.email}?subject=${subject}&body=${body}`
+    const name = data.get('name') || ''
+    const message = data.get('message') || ''
+    const waMessage = encodeURIComponent(`Bonjour, je suis ${name}.\n\n${message}`)
+    window.open(`https://wa.me/${personalInfo.whatsapp}?text=${waMessage}`, '_blank')
     e.target.reset()
   }
 
@@ -65,7 +64,7 @@ export default function Contact() {
                 <div className="lbl">{fields.whatsapp}</div>
                 <div className="val">
                   <a href={`https://wa.me/${personalInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
-                    +237 680 29 28 80
+                    {personalInfo.phone[0]}
                   </a>
                 </div>
               </div>
@@ -92,21 +91,17 @@ export default function Contact() {
                 <input type="text" id="name" name="name" placeholder={form.namePlaceholder} required />
               </div>
               <div className="form-group">
-                <label htmlFor="email">{form.email}</label>
-                <input type="email" id="email" name="email" placeholder={form.emailPlaceholder} required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject">{form.subject}</label>
-                <input type="text" id="subject" name="subject" placeholder={form.subjectPlaceholder} />
-              </div>
-              <div className="form-group">
                 <label htmlFor="message">{form.message}</label>
                 <textarea id="message" name="message" placeholder={form.messagePlaceholder} required />
               </div>
               <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                <i className="fas fa-paper-plane" /> {form.submit}
+                <i className="fab fa-whatsapp" /> {form.submit}
               </button>
             </form>
+            <div className="form-whatsapp-note">
+              <i className="fas fa-info-circle" />
+              <span>{t('contact.whatsappNote')}</span>
+            </div>
           </div>
         </div>
       </div>
