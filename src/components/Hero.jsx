@@ -79,7 +79,7 @@ export default function Hero() {
               <a href="#projects" className="btn btn-primary" onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}>
                 <i className="fas fa-folder-open" /> {t('hero.btnProjects')}
               </a>
-              <a href="/assets/documents/CV_Divane_Daryl.pdf" className="btn btn-primary" download>
+<a href="/assets/documents/CV_Divane_Daryl_Ndjaga_Djeugang.pdf" className="btn btn-outline" download>
                 <i className="fas fa-download" /> {t('hero.btnCv')}
               </a>
             </div>
